@@ -1,0 +1,85 @@
+.tantum-block{
+    border: 1px solid red;
+    margin-bottom: 3rem;
+    position: relative;
+    margin-left: 1.8rem;
+}
+
+.tantum-block.winter-house{
+    margin-bottom: 4.4rem;
+    background: linear-gradient(90deg, #e8e6e6 45%, #fff 20%);
+    min-height: 37rem;
+    display: flex;
+    // url("./../../images/small/tantum-dotts-house.png") no-repeat center bottom,
+    .content{
+        min-width: 17.3rem;
+    }
+    .tantum-winter-house{
+        background: url("./../../images/small/tantum-winter-home.jpg") no-repeat right bottom;
+        height: 25.2rem;
+        position: absolute;
+        width: 29.2rem;
+        right: 0;
+    }
+}
+.tantum-block.welcome{
+    margin-bottom: 1.4rem;
+}
+.tantum-block.what-we-do{
+    margin-bottom: 3rem;
+}
+.tantum-block.tantum-way{
+    margin-bottom: 2.4rem;
+}
+.tantum-block:last-child{
+    margin-bottom: 0;
+}
+
+
+@media screen and (min-width:768px){
+    .tantum-block.winter-house{
+        margin-bottom: 6rem;
+        background: url("./../../images/medium/tantum-dotts-house.png") no-repeat center bottom;
+        min-height: 65rem;
+
+        .tantum-winter-house{
+            background: url("./../../images/medium/tantum-winter-home.jpg") no-repeat right bottom;
+            border: 1px solid orange;
+            width: 52.7rem;
+            height: 37.8rem;
+        }
+    }
+    .tantum-block.welcome{
+        margin-bottom: 1.8rem;
+    }
+    .tantum-block.what-we-do{
+        margin-bottom: 5rem;
+    }
+    .tantum-block.tantum-way{
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .tantum-block.winter-house{
+        margin-bottom: 13.6rem;
+        background: url("./../../images/large/tantum-dotts-house.png") no-repeat center bottom;
+        min-height: 85rem;
+
+        .tantum-winter-house{
+            background: url("./../../images/large/tantum-winter-home.jpg") no-repeat right bottom;
+            border: 1px solid green;
+            width: 80rem;
+            height: 52.4rem;
+        }
+    }
+    .tantum-block.welcome{
+        margin-bottom: 3rem;
+    }
+    .tantum-block.what-we-do{
+        margin-bottom: 4rem;
+    }
+    .tantum-block.tantum-way{
+        margin-bottom: 5.5rem;
+    }
+}
