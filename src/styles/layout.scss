@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+.tantum-wrapper{
+    max-width: 116rem;
+    margin:0 auto;
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas: 
+    "Header" "Main"  "Footer";
+    grid-template-rows: auto 1fr auto;
+}
+
+header{
+    grid-area: "Header";
+}
+
+main{
+    grid-area: "Main";
+}
+
+footer{
+    grid-area: "Footer";
+}
+
+@media screen and (max-width:375px){
+    html{
+        font-size: 50%;
+    }
+}

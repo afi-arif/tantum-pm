@@ -1,0 +1,134 @@
+.hidden{
+    text-indent: -200em;
+    overflow: hidden;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+header{
+    padding: 1.8rem 3.2rem 2rem 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+
+    .screen{
+        background: rgba($color: #000000, $alpha: 0.4);
+        position: fixed;
+        top: 0; left: 0;
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    nav.small {
+        position: absolute;
+        right: 0; top: 0;
+        height: 100vh;
+        min-width: 25rem;
+        background: #fff;
+        font-size: 1.2rem;
+        padding-top: 1.5rem;
+        
+        ul{
+            clear: both;
+            padding-top: 2rem;
+
+            li {
+                margin-bottom: 1rem;
+
+                a{
+                    display: block;
+                    padding: 1.5rem 2rem;
+                }
+
+                a:hover{
+                    background: #e8e8e8;
+                }
+            }
+
+            li:last-child{
+                a{
+                    background: url("./../images/tantum-download-brouchure.svg") no-repeat 2rem center;
+                    text-indent: 3.5rem;
+                    font-family: 'Play', sans-serif;
+                }
+                a:hover{
+                    background:  #e8e8e8 url("./../images/tantum-download-brouchure.svg") no-repeat 2rem center;
+                    text-indent: 3.5rem;
+                }
+            }
+        }
+    }
+
+    a.nav-icon {
+        background: #fff url("./../images/tantum-nav-close-btn.svg") no-repeat right top;
+        padding: 0.4rem 1rem;
+        float: right;
+        margin-right: 2rem;
+    }
+}
+.tantum-logo{
+    background: url("./../images/tantum-logo.svg") no-repeat center;
+    padding: 4rem 3.5rem;
+    background-size: contain;
+    margin-left: 1.8rem;
+}
+
+
+@media screen and (min-width:768px){
+    .tantum-logo{
+        padding: 5.3rem 4.6rem;
+    }
+    
+}
+
+@media screen and (min-width:1024px){
+    header{
+        .tantum-logo{
+            padding: 7rem 6rem;
+        }
+        nav.small {
+            ul li a:hover{
+                background: transparent;
+            }
+            ul li:last-child a:hover{
+                background:  url("./../images/tantum-download-brouchure.svg") no-repeat 2rem center;
+            }
+        }
+        nav ul {
+            display: flex;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+
+            li{
+                margin-left: 2.6rem;
+                a{
+                    background: #fff;
+                }
+                a:hover,
+                a.active{
+                    color: #0c707d;
+                    background: transparent;
+                }
+            }
+            li:last-child{
+                padding: 0.5rem 4.5rem;
+                position: relative;
+                top:-0.8rem;
+                cursor: pointer;
+
+                a{
+                    background: url("./../images/tantum-download-brouchure.svg") no-repeat 2rem center;
+                    text-indent: 3.5rem;
+                    font-family: 'Play', sans-serif;
+                }
+            }
+        }
+    }
+    
+}
