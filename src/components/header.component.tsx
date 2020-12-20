@@ -5,7 +5,7 @@ interface NaviState {
     show:boolean;
 }
 
-export class Header extends React.Component<NavLink, NaviState> {
+export class Header extends React.Component<NavLink|{}, NaviState> {
     
     state:NaviState = {
         show:false
@@ -13,14 +13,14 @@ export class Header extends React.Component<NavLink, NaviState> {
 
     toggle = (e: { preventDefault: () => void; }):void =>{
         e.preventDefault();
-        this.setState(prevState => ({name:"newname", show:!prevState.show}));
+        this.setState(prevState => ({show:!prevState.show}));
     }
     render() {
         return (
             <header>
                <h1><a className="hidden tantum-logo" href="#">Welocome to Tantum website</a></h1>
                <div className={"screen " + (this.state.show ? "show":"")}></div>
-               <nav className="small">
+               <nav className={"small " + (this.state.show ? "show" : "")}>
                    <a className="nav-icon hidden" onClick={this.toggle} href="#">tantum-Menu</a>
                    <ul>
                        <li><NavLink activeClassName="active" to="home">Home</NavLink></li>
@@ -28,7 +28,7 @@ export class Header extends React.Component<NavLink, NaviState> {
                        <li><NavLink to="what-we-do">What we do</NavLink></li>
                        <li><NavLink to="projects">Projects</NavLink></li>
                        <li><NavLink to="contacts">Contacts</NavLink></li>
-                       <li><a href="#">download browchure</a></li>
+                       <li><a href="#">download <span>browchure</span></a></li>
                    </ul>
                </nav>
             </header>
