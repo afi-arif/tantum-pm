@@ -1,8 +1,8 @@
 import React, {FC} from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link, Redirect, Switch} from "react-router-dom";
-import "./styles/global.scss";
 import "./styles/layout.scss";
+import "./styles/global.scss";
 import {Home} from "./components/home.component";
 import {Service} from "./components/service.component";
 import {Layout } from "./components/layout";

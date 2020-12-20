@@ -5,7 +5,7 @@ interface NaviState {
     show:boolean;
 }
 
-export class Header extends React.Component<NavLink|{}, NaviState> {
+export class Header extends React.Component<React.LinkHTMLAttributes<any>, NaviState> {
     
     state:NaviState = {
         show:false
