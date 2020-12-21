@@ -1,35 +1,122 @@
 .tantum-block{
-    border: 1px solid red;
     margin-bottom: 3rem;
     position: relative;
     margin-left: 1.8rem;
+    h2{
+        font-size: 1.6rem;
+        font-family: "Playfair Display", serif;
+    }
+    p{
+        line-height: 1.5;
+    }
 }
 
 .tantum-block.winter-house{
     margin-bottom: 4.4rem;
-    background: linear-gradient(90deg, #e8e6e6 45%, #fff 20%);
-    min-height: 37rem;
-    display: flex;
-    // url("./../../images/small/tantum-dotts-house.png") no-repeat center bottom,
+    background-image: 
+    url("./../../images/small/tantum-winter-home.jpg"),
+    url("./../../images/small/tantum-dotts-house.png"),
+    linear-gradient(90deg,#e8e6e6 100%, rgba(0,212,255,0) 0%);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 20%, right 56% bottom, 0  0;
+    background-size: auto, auto, 47% 92%;
+    height: 35rem;
+    
     .content{
-        min-width: 17.3rem;
+        width: 45%;
+        background: #fff;
+        top: 1.5rem;
+        position: relative;
+        padding: 2rem 1.5rem;
+
+        h2{
+            margin-bottom: 1.5rem;
+        }
+        p{
+            margin-right: 20%;
+        }
     }
-    .tantum-winter-house{
-        background: url("./../../images/small/tantum-winter-home.jpg") no-repeat right bottom;
-        height: 25.2rem;
-        position: absolute;
-        width: 29.2rem;
-        right: 0;
-    }
+    
 }
 .tantum-block.welcome{
     margin-bottom: 1.4rem;
+    margin-right: 2rem;
+    .content{
+        margin-bottom: 1.5rem;
+        padding: 1rem 0 2em 2rem;
+        background: #fafafa url("./../../images/small/home-hall-light.png") no-repeat 78% 2.3rem;
+        h2{
+            margin-bottom: 1.5rem;
+        }
+        p{
+            margin-bottom: 1.5rem;
+            width: 50%;
+        }
+    }
+    .pattern{
+        background: url("./../../images/small/tantum-dotts-squre.png") no-repeat right 0;
+        height: 5.7rem;
+    }
 }
 .tantum-block.what-we-do{
     margin-bottom: 3rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    div{
+        flex-basis: 50%;
+    }
+    h2{
+        margin-bottom: 1.5rem;
+    }
+    p{
+        margin-bottom: 1.5rem;
+        width: 90%;
+    }
+    div:last-child{
+        a{
+            display: block;
+            width: 100%;
+            border: 1px solid #b3b3b3;
+            margin-bottom: 1rem;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        a:hover{
+            color:#fff;
+            background: #000;
+        }
+    }
+   
 }
 .tantum-block.tantum-way{
     margin-bottom: 2.4rem;
+    margin-left: 4rem;
+    background: #fafafa;
+    padding: 2rem;
+    padding-left: 8.6rem;
+
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        margin-right: 15%;
+        margin-bottom: 1.5rem;
+
+        strong{
+            display: block;
+        }
+    }
+
+    span{
+        display: block;
+        text-align: right;
+        a{
+            background: url("./../../images/read-more-arrow.svg") no-repeat right center;
+            padding-right: 1.5rem;
+        }
+    }
 }
 .tantum-block:last-child{
     margin-bottom: 0;
@@ -37,23 +124,59 @@
 
 
 @media screen and (min-width:768px){
-    .tantum-block.winter-house{
-        margin-bottom: 6rem;
-        background: url("./../../images/medium/tantum-dotts-house.png") no-repeat center bottom;
-        min-height: 65rem;
 
-        .tantum-winter-house{
-            background: url("./../../images/medium/tantum-winter-home.jpg") no-repeat right bottom;
-            border: 1px solid orange;
-            width: 52.7rem;
-            height: 37.8rem;
+    .tantum-block{
+        h2{
+            font-size: 3.2rem;
+        }
+        p{
+            font-size: 1.6rem;
         }
     }
+    .tantum-block.winter-house{
+        margin-bottom: 4.4rem;
+        background-image: 
+        url("./../../images/medium/tantum-winter-home.jpg"),
+        url("./../../images/medium/tantum-dotts-house.png"),
+        linear-gradient(90deg,#e8e6e6 100%, rgba(0,212,255,0) 0%);
+        background-position: right 6.5rem, right 56% bottom, 0  0;
+        background-size: auto, auto, 47% 92%;
+        height: 65rem;
+        
+        .content{
+            top: 5.2rem;
+            p{
+                font-size: 1.6rem;
+            }
+        }
+        
+    }
+    
     .tantum-block.welcome{
         margin-bottom: 1.8rem;
+        .content{
+            padding: 4rem 0 6.5em 3rem;
+            background: #fafafa url("./../../images/medium/home-hall-light.png") no-repeat 90% 5.6rem;
+            h2{
+                margin-bottom: 1.5rem;
+            }
+            p{
+                margin-bottom: 1.5rem;
+                width: 50%;
+            }
+        }
+        .pattern{
+            background: url("./../../images/medium/tantum-dotts-squre.png") no-repeat right 0;
+            height: 12.2rem;
+        }
     }
     .tantum-block.what-we-do{
         margin-bottom: 5rem;
+        div:last-child{
+            a{
+                font-size: 2rem;
+            }
+        }
     }
     .tantum-block.tantum-way{
         margin-bottom: 5rem;
@@ -61,23 +184,70 @@
 }
 
 @media screen and (min-width:1024px){
+
+    .tantum-block{
+        h2{
+            font-size: 4.2rem;
+        }
+
+        p{
+            font-size: 1.8rem;
+        }
+    }
     .tantum-block.winter-house{
         margin-bottom: 13.6rem;
-        background: url("./../../images/large/tantum-dotts-house.png") no-repeat center bottom;
-        min-height: 85rem;
-
-        .tantum-winter-house{
-            background: url("./../../images/large/tantum-winter-home.jpg") no-repeat right bottom;
-            border: 1px solid green;
-            width: 80rem;
-            height: 52.4rem;
+        background-image: 
+        url("./../../images/large/tantum-winter-home.jpg"),
+        url("./../../images/large/tantum-dotts-house.png"),
+        linear-gradient(90deg,#e8e6e6 100%, rgba(0,212,255,0) 0%);
+        background-position: right 6.5rem, right 46% bottom, 0  0;
+        background-size: auto, auto, 47% 92%;
+        height: 80rem;
+        
+        .content{
+            top: 4.2rem;
+            p{
+                font-size: 2rem;
+            }
         }
     }
     .tantum-block.welcome{
         margin-bottom: 3rem;
+        .content{
+            padding: 4rem 0 6.5em 3rem;
+            background: #fafafa url("./../../images/large/home-hall-light.png") no-repeat 90% 5.6rem;
+            height: 33rem;
+            h2{
+                margin-bottom: 1.5rem;
+            }
+            p{
+                margin-bottom: 1.5rem;
+                width: 30%;
+            }
+        }
+        .pattern{
+            background: url("./../../images/large/tantum-dotts-squre.png") no-repeat right top;
+            height: 13rem;
+        }
     }
     .tantum-block.what-we-do{
         margin-bottom: 4rem;
+
+        h2{
+            margin-bottom: 1.5rem;
+        }
+        p{
+            margin-bottom: 1.5rem;
+            width: 70%;
+        }
+
+        div:last-child{
+            a{
+                padding: 3rem 0;
+                font-size: 2.6rem;
+            }
+          
+        }
     }
     .tantum-block.tantum-way{
         margin-bottom: 5.5rem;
