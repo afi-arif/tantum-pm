@@ -36,8 +36,12 @@ as the last.</p>
                <div className="tantum-block tantum-way">
                    <div className="content">
                        <h2>The Tantum way</h2>
+                       <div className="show-case"></div>
                        <p>From planning to estimation to delivery, we do things differently. It’s why our clients trust us. Every time.</p>
-                       <p><strong>Dedicated project manager</strong> Dedicated project manager</p>
+                       <p>
+                           <strong>Dedicated project manager</strong>
+                           When you work with us, you’ll get your own dedicated project manager. As your point of contact for everything, they’ll take care of the entire process from start to finish. It’s like having your own personal assistant, quality auditor and budget controller all rolled into one. So you can rest assured that your project is in safe hands. Just how it should be.
+                        </p>
                        <span><a href="">read more</a></span>
                    </div>
                </div>

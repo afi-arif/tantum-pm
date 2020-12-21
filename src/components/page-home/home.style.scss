@@ -94,7 +94,16 @@
     margin-left: 4rem;
     background: #fafafa;
     padding: 2rem;
-    padding-left: 8.6rem;
+    padding-left: 12rem;
+    position: relative;
+
+    .show-case{
+        position: absolute;
+        width: 120px;
+        height: 13.2rem;
+        left: -2rem; top: 2.5rem;
+        background: url("./../../images/small/tantum-moduler-kitchen.jpg") no-repeat;
+    }
 
     h2{
         margin-bottom: 1rem;
@@ -113,7 +122,7 @@
         display: block;
         text-align: right;
         a{
-            background: url("./../../images/read-more-arrow.svg") no-repeat right center;
+            background: url("./../../images/small/read-more-arrow.svg") no-repeat right center;
             padding-right: 1.5rem;
         }
     }
@@ -180,6 +189,30 @@
     }
     .tantum-block.tantum-way{
         margin-bottom: 5rem;
+        padding-left: 27rem;
+        .show-case{
+            width: 26.1rem;
+            height: 28rem;
+            top:3rem;
+            background: url("./../../images/medium/tantum-moduler-kitchen.jpg") no-repeat;
+        }
+
+        p{
+            margin-right: 5%;
+            margin-bottom: 1.5rem;
+    
+            strong{
+                display: block;
+            }
+        }
+        span{
+               a{
+                font-size: 1.6rem;
+                background: url("./../../images/read-more-arrow.svg") no-repeat right center;
+                background-size: 1.2rem auto;
+            }
+        }
+       
     }
 }
 
