@@ -206,15 +206,13 @@
     }
     .tantum-block.winter-house{
         margin-bottom: 4.4rem;
-        margin-left: 13rem;
         background-image: 
-        url("./../../images/large/tantum-winter-home.jpg"),
+        url("./../../images/medium/tantum-winter-home.jpg"),
         url("./../../images/medium/tantum-dotts-house.png"),
-        linear-gradient(90deg,#e8e6e6 100%, rgba(0,212,255,0) 0%);
-        background-position: right 6.5rem, right 56% bottom, 0  0;
+        linear-gradient(90deg, #e8e6e6 100%, rgba(250,250,250,0) 0%);
+        background-position: right 6.5rem, left 62% bottom, 25%  0;
         background-size: auto, auto, 47% 92%;
         height: 65rem;
-        
         .content{
             top: 5.2rem;
             p{
@@ -277,6 +275,69 @@
         }
        
     }
+    .tantum-block.tantum-clients{
+        margin:0;
+        margin-right: 3rem;
+        padding-left: 8rem;
+        background: url("./../../images/medium/tantum-dotts-rectangle.png")  no-repeat 0 5.5rem;
+        border: 1px solid green;
+        h2{
+            margin-bottom: 1rem;
+            font-style: italic;
+            padding-left: 2.5rem;
+        }
+        .content{
+            padding-left: 2.5rem;
+            .feedback{
+                display: flex;
+                padding: 1.5rem;
+                flex-wrap: wrap;
+                align-items: center;
+                font-size: 1.2rem;
+                background: #fafafa;
+                margin-bottom: 1rem;
+                .imag-icon{
+                    flex-basis: 10rem;
+                    height: 10rem;
+                    margin-right: 2rem;
+                }
+    
+                .imag-icon.icon1{
+                    background: url("./../../images/medium/tantum-multi-story.png") no-repeat;
+                }
+                .imag-icon.icon2{
+                    background: url("./../../images/medium/tantum-home-window.png") no-repeat;
+                }
+                .imag-icon.icon3{
+                    background: url("./../../images/medium/tantum-home-sofa.png") no-repeat;
+                }
+    
+                .client-details{
+                    margin-bottom: 1rem;
+                    font-size: 1.4rem;
+                    h5{
+                        font-weight: normal;
+                        margin-bottom: 0.5rem;
+                        
+                    }
+                    span{
+                        color:#981e1e;
+                        font-family: Garamond, serif;
+                    }
+                }
+    
+                .comment{
+                    flex-basis: 100%;
+                    padding-top: 1rem;
+                    font-family: Garamond, serif;
+                    padding-left: 12rem;
+                    font-size: 1.4rem;
+                    top:-2rem; position: relative;
+                }
+            }
+        }
+    }
+    
 }
 
 @media screen and (min-width:1024px){
