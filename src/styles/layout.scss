@@ -18,11 +18,12 @@ body{
 }
 
 .tantum-wrapper{
-    max-width: 116.6rem;
+    max-width: 120rem;
     margin:0 auto;
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
+    border: 1px solid red;
 }
 
 @media screen and (max-width:375px){
