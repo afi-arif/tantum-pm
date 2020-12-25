@@ -1,0 +1,51 @@
+.tantum-block{
+    margin-bottom: 3rem;
+    position: relative;
+    h2{
+        font-size: 1.6rem;
+        font-family: "Playfair Display", serif;
+
+    }
+    p{
+        line-height: 1.5;
+    }
+}
+.tantum-block.safe-hands{
+    background: url("./../../images/small/tantum-house-hall.jpg") no-repeat center top;
+    min-height: 33.2rem;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+    padding-left: 3.6rem;
+     .content{
+        background: #fff;
+        padding: 1.5rem;
+        margin-left: 9.3rem;
+        flex-basis: 100%;
+        p{
+            color: #000;
+            padding-top: 0.5rem;
+        }
+    }
+
+    .btn-block{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        background-image: linear-gradient(to right, rgba(0,0,0,0) 0rem , #e8e6e6 0%),
+        url("./../../images/small/tantum-pattern-semi-squre.png");
+        background-repeat: no-repeat, no-repeat;
+        background-position: left 9.3rem bottom 2.5rem, left bottom;
+        padding-top: 3.1rem;
+        padding-left: 8.5rem;
+        height: 12rem;
+    }
+}
+
+.tantum-block.motive{
+    border: 1px solid red;
+    margin-left: 3.6rem;
+}

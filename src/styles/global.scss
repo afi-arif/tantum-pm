@@ -4,6 +4,19 @@
     display: inline-block;
 }
 
+button{
+    background: #fff;
+    min-width: 9rem;
+    padding: 1rem 0;
+    border: 1px solid #b3b3b3;
+    font-family: 'Play', sans-serif;
+    display: block;
+    cursor: pointer;
+}
+.no-hand-hold{
+    display: none;
+}
+
 a{
     text-decoration: none;
     color: #000;
@@ -17,6 +30,7 @@ a{
     height: 100vh;
     width: 100vw;
     display: none;
+    z-index: 1;
 }
 
 .screen.show{
@@ -52,6 +66,7 @@ header{
         background: #fff;
         font-size: 1.2rem;
         padding-top: 1.5rem;
+        z-index: 1;
         
         ul{
             clear: both;
@@ -91,7 +106,12 @@ header{
             display: block;
         }
     }
-   
+    nav.small,
+    nav.small.show {
+        ul.no-hand-hold{
+            display: none;
+        }
+    }
 
 }
 
@@ -147,13 +167,17 @@ footer{
     .screen{
         display: none;
     }
+    .hand-hold{
+        display: none;
+    }
     header{
         padding-right: 0;
         padding-left: 13rem;
         .tantum-logo{
             padding: 7rem 6rem;
         }
-        nav.small {
+        nav.no-hand-hold {
+            display: block;
             ul li a:hover{
                 background: transparent;
             }
@@ -162,7 +186,7 @@ footer{
             }
         }
 
-        nav.small {
+        nav.no-hand-hold {
             position: relative;
             height: auto;
             min-width: auto;
@@ -170,8 +194,7 @@ footer{
             font-size: inherit;
             padding-top: 0;
         }
-        nav.small,
-        nav.small.show{
+        nav.no-hand-hold{
             .nav-icon.hidden{
                 display: none;
             }

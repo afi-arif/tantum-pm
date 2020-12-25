@@ -1,38 +1,30 @@
-import React, {FC} from "react";
+import React, { Suspense, FC} from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Link, Redirect, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect, Switch} from "react-router-dom";
+
 import "./styles/layout.scss";
 import "./styles/global.scss";
-import {Home} from "./components/page-home/home.component";
-import {Service} from "./components/service.component";
 import {Layout } from "./components/layout";
 
-const routes = [
-       {
-        path:"/Home",
-        component:Home
-    },
-    {
-        path:"/service",
-        component:Service
-    }
-];
+const Home = React.lazy(() => import("./components/page-home/home.component"));
+const Aboutus = React.lazy(() => import("./components/page-about-us/about-us.component"));
 
 
 const App:FC = () => {
     return (
-        
     
         <Router>
             <Layout>
             <Switch>
-                <Redirect exact from="/" to="/home" />
-                <Route path="/home">
-                    <Home />
-                </Route>
-                <Route exact path="/service">
-                    <Service />
-                </Route>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Redirect exact from="/" to="/about-us" />
+                    <Route path="/home">
+                        <Home />
+                    </Route>
+                    <Route path="/about-us">
+                        <Aboutus />
+                    </Route>
+                </Suspense>
             </Switch>
             </Layout>
         </Router>

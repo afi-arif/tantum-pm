@@ -11,18 +11,33 @@ export class Header extends React.Component<React.LinkHTMLAttributes<any>, NaviS
         show:false
     }
 
-    toggle = (e: { preventDefault: () => void; }):void =>{
+    toggle = (e:React.MouseEvent):void =>{
         e.preventDefault();
         this.setState(prevState => ({show:!prevState.show}));
     }
+
+    onChangeRoute = ():void => {
+        this.setState(prevState => ({show:!prevState.show}));
+    }
+
     render() {
         return (
             <header>
-               <h1><a className="hidden tantum-logo" href="#">Welocome to Tantum website</a></h1>
+               <h1><NavLink className="hidden tantum-logo" to="home">Welocome to Tantum website</NavLink></h1>
                <div className={"screen " + (this.state.show ? "show":"")}></div>
                <nav className={"small " + (this.state.show ? "show" : "")}>
                    <a className="nav-icon hidden" onClick={this.toggle} href="#">tantum-Menu</a>
-                   <ul>
+                   <ul className="hand-hold">
+                       <li><NavLink activeClassName="active" to="home" onClick={this.onChangeRoute}>Home</NavLink></li>
+                       <li><NavLink to="about-us" onClick={this.onChangeRoute}>About us</NavLink></li>
+                       <li><NavLink to="what-we-do" onClick={this.onChangeRoute}>What we do</NavLink></li>
+                       <li><NavLink to="projects" onClick={this.onChangeRoute}>Projects</NavLink></li>
+                       <li><NavLink to="contacts" onClick={this.onChangeRoute}>Contacts</NavLink></li>
+                       <li><a href="#">download <span>browchure</span></a></li>
+                   </ul>
+               </nav>
+               <nav className="no-hand-hold">
+                   <ul >
                        <li><NavLink activeClassName="active" to="home">Home</NavLink></li>
                        <li><NavLink to="about-us">About us</NavLink></li>
                        <li><NavLink to="what-we-do">What we do</NavLink></li>
