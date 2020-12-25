@@ -17,7 +17,7 @@
     justify-content: flex-end;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     padding-left: 3.6rem;
      .content{
         background: #fff;
@@ -46,6 +46,104 @@
 }
 
 .tantum-block.motive{
-    border: 1px solid red;
     margin-left: 3.6rem;
+    background-image: url("./../../images/small/tantum-house-ventilator.jpg"),
+    linear-gradient(to left, #e8e6e6 100%, rgba(0,212,255,0) 0rem),
+    url("./../../images/small/tantum-dotts-squre.png");
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: right 5.6rem, left -12rem bottom 6rem, right 2rem bottom;
+    height: 32.4rem;
+    ul{
+        padding: 1.6rem;
+        padding-right: 4.6rem;
+        margin-right: 12rem;
+       
+        li:last-child{
+            margin-bottom: 0.4rem;
+        }
+        li{
+            border-bottom: 1px solid #757575;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            h3{
+                font-size: 1.6rem;
+                font-family: "Playfair Display", serif;
+                margin-bottom: 0.2em;
+            }
+            div{
+                list-style: 1.5;
+                font-size: 1.1rem;
+                display: none;
+                margin-bottom: 0.5rem;
+            }
+            a{
+                margin-left: auto;
+                display: block;
+                background: url("./../../images/more-down-btn.svg") no-repeat right center;
+                background-size: 1rem 0.5rem;
+            }
+        }
+        li.show{
+            div{
+                display: block;
+            }
+            a{
+                background: url("./../../images/more-up-btn.svg") no-repeat right center;
+            }
+        }
+    }
+}
+
+.tantum-block.meet-the-team{
+    margin-left: 3.6rem;
+    h2{
+        margin-bottom: 2rem;
+    }
+    .photo-gallery{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        grid-row-gap: 4rem;
+        padding-right: 2rem;
+        justify-content: left;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: left;
+            font-size: 1.1rem;
+
+            .profile-info{
+                padding-top: 14.3rem;
+            }
+
+            h5{
+                margin-bottom: 0.5rem;
+                font-weight: bold;
+                color: #000;
+            }
+        }
+       
+        div.tantum-md{
+            background: url("./../../images/small/tantum-managing-director.jpg") no-repeat;
+        }
+        div.tantum-crm{
+            background: url("./../../images/small/tantum-relation-ship-manager.jpg") no-repeat;
+        }
+        div.tantum-pm{
+            background: url("./../../images/small/tantum-project-manager.jpg") no-repeat;
+        }
+        div.tantum-fc{
+            background: url("./../../images/small/tantum-finance-controller.jpg") no-repeat;
+        }
+        div.tantum-mm{
+            background: url("./../../images/small/tantum-marketing-manager.jpg") no-repeat;
+        }
+        div.tantum-oa{
+            background: url("./../../images/small/tantum-office-admin.jpg") no-repeat;
+        }
+        div.tantum-pd{
+            background: url("./../../images/small/tantum-product-dev-manager.jpg") no-repeat;
+        }
+    }
 }
