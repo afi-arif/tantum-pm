@@ -41,7 +41,7 @@ export default class Aboutus extends React.Component<ShowInfo> {
             </li>
         ))
         return (
-            <>
+            <div className="main-aboutus">
                 <div className="tantum-block safe-hands">
                     <div className="content">
                         <h2>Your project, in safe hands.</h2>
@@ -50,8 +50,8 @@ export default class Aboutus extends React.Component<ShowInfo> {
                     
                     </div>
                     <div className="btn-block">
-                        <button>Our Object</button>
-                        <span className="pattern"></span>
+                        <button>Our Project</button>
+                        {/* <span className="pattern"></span> */}
                     </div>
                 </div>
                 <div className="tantum-block motive">
@@ -106,7 +106,7 @@ export default class Aboutus extends React.Component<ShowInfo> {
                         </div>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 }
