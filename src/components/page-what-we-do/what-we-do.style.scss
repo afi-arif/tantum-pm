@@ -1,0 +1,40 @@
+.tantum-block{
+    margin-bottom: 4rem;
+   
+    h2{
+        font-size: 1.6rem;
+        font-family: "Playfair Display", serif;
+    }
+    p{
+        line-height: 1.5;
+    }
+}
+
+.tantum-block.end-to-end{
+    border-top: 1px solid #000;
+    padding-top: 8.7rem;
+    background-image:  url("./../../images/small/tantum-engineer-planning.jpg"),
+    linear-gradient(to left, #e8e6e6 20.5rem, rgba(0,0,0,0) 20.5rem );
+    background-position: center 3rem, left  -15rem;
+    background-size: cover  17.1rem;
+    background-repeat: no-repeat;
+    padding-bottom: 2.5rem;
+    .content{
+        width: 20.5rem;
+        margin-left: auto;
+        .content-info{
+            background: #fff;
+            padding: 1.3rem;
+            
+            p{
+                color: #000;
+                padding-top: 1.5rem;
+            }
+        }
+        .content-btn{
+            background: #e8e6e6;
+            padding: 2.6rem 0;
+            text-align: center;
+        }
+    }
+}

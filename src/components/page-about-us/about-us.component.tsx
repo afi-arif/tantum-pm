@@ -51,7 +51,6 @@ export default class Aboutus extends React.Component<ShowInfo> {
                     </div>
                     <div className="btn-block">
                         <button>Our Project</button>
-                        {/* <span className="pattern"></span> */}
                     </div>
                 </div>
                 <div className="tantum-block motive">
