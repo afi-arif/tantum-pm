@@ -103,6 +103,50 @@
             a.active{
                background: url("./../../images/read-less-arrow.svg") right center / 1rem no-repeat;
             }
+
+        }
+
+        .feature.checkList {
+               
+            p{
+                margin-bottom: 2rem;
+            }
+            button{
+                border: 1px solid #000;
+                font-family: "Playfair Display", serif;
+                text-transform: uppercase;
+                background: #fff url("./../../images/see-more-btn.svg") right 1rem center no-repeat;
+                margin-bottom: 2rem;
+                padding: 1rem 3rem;
+            }
+
+            button.show-less{
+                background: #fff url("./../../images/read-less-arrow.svg") right 1rem center no-repeat;
+            }
+
+            .check-list{
+                display: none;
+                font-size: 1.1rem;
+                h6{
+                    
+                    font-weight: bold;
+                    color: #000;
+                }
+
+                ul{
+                    margin-bottom: 1.5rem;
+                    color: #000;
+                    li{
+                        margin:0.5rem 0;
+                    }
+                }
+
+            }
+
+            .check-list.show-list{
+                display: block;
+            }
+            
         }
     }
 }
@@ -202,6 +246,50 @@
                 }
                 
             }
+
+            .feature.checkList {
+               
+                p{
+                    margin-bottom: 2rem;
+                }
+                button{
+                    border: 1px solid #000;
+                    font-family: "Playfair Display", serif;
+                    text-transform: uppercase;
+                    background: #fff url("./../../images/see-more-btn.svg") right 1rem center no-repeat;
+                    margin-bottom: 2rem;
+                }
+
+                button.show-less{
+                    background: #fff url("./../../images/read-less-arrow.svg") right 1rem center no-repeat;
+                }
+
+                .check-list{
+                    display: none;
+                    font-size: 1.5rem;
+                    h6{
+                        
+                        font-weight: bold;
+                        color: #000;
+                    }
+
+                    ul{
+                        margin-bottom: 2rem;
+                        color: #000;
+                        li{
+                            margin:0.5rem 0;
+                        }
+                    }
+
+                }
+
+                .check-list.show-list{
+                    display: block;
+                }
+                
+            }
+
+           
         }
     }
     
@@ -304,6 +392,47 @@
                 a.active{
                     background: url("./../../images/read-less-arrow.svg") right 1rem / 2rem no-repeat;
                  }
+            }
+            .feature.checkList {
+               
+                p{
+                    margin-bottom: 2rem;
+                }
+                button{
+                    border: 1px solid #000;
+                    font-family: "Playfair Display", serif;
+                    text-transform: uppercase;
+                    background: #fff url("./../../images/see-more-btn.svg") right 1rem center no-repeat;
+                    margin-bottom: 2rem;
+                }
+
+                button.show-less{
+                    background: #fff url("./../../images/read-less-arrow.svg") right 1rem center no-repeat;
+                }
+
+                .check-list{
+                    display: none;
+                    font-size: 2rem;
+                    h6{
+                        
+                        font-weight: bold;
+                        color: #000;
+                    }
+
+                    ul{
+                        margin-bottom: 3rem;
+                        color: #000;
+                        li{
+                            margin:0.5rem 0;
+                        }
+                    }
+
+                }
+
+                .check-list.show-list{
+                    display: block;
+                }
+                
             }
         }
     }

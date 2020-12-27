@@ -14,14 +14,20 @@ export default class Whatwedo extends React.Component<InfoView> {
         this.state = {
             view1:false,
             view2:false,
-            view3:false
+            view3:false,
+            showList:false
         } 
+    
+    }
+
+    showCheckList = (e:React.MouseEvent):void => {
+        e.preventDefault();
+        this.setState((prev:InfoView) => ({showList:!prev.showList}));
     }
    
     toggleView = (e:React.MouseEvent, name: string):void => {
         e.preventDefault();
-        this.setState((prev:InfoView) => ({[name]:!this.state[name]}));
-        console.log(this.state);
+        this.setState((prev:InfoView) => ({[name]:!this.state[name], showList:false}));
     }
     render(){
         return(
@@ -63,10 +69,45 @@ export default class Whatwedo extends React.Component<InfoView> {
                             </div>
                             <a href="#" className={this.state.view2 ? 'active' : ''} onClick={(e) => this.toggleView(e, 'view2')}>read more</a>
                         </div>
-                        <div className="feature">
+                        <div className="feature checkList">
                             <h5>After</h5>
                             <div className={`info  ${this.state.view3 ? 'active' : ''}`}>
                                 <p>We will sign off the project, and then to keep control of the main contractors, we will allow you to withhold the final 5% payment for three months for any snagging works.You will be provided with a completion file, which will contain the following documentation where applicable:</p>
+                                <button className={this.state.showList ? 'show-less': ''} onClick={this.showCheckList}>CheckList</button>
+                                <div className={`check-list ${this.state.showList ? 'show-list': ''}`}>
+                                    <ul>
+                                        <li><h6>Pre-Construction</h6></li>
+                                        <li>Structural Engineering</li>
+                                        <li>Architecture services</li>
+                                        <li>Party Wall Survey</li>
+                                        <li>Quantity surveyor</li>
+                                        <li>Multiple Quotations</li>
+                                        <li>Building Notice</li>
+                                    </ul>
+                                    <ul>
+                                        <li><h6>During Construction</h6></li>
+                                        <li>Building & Workforce Management</li>
+                                        <li>Regular Updates by Direct Email or Client Portal</li>
+                                        <li>Dedicated Project Manager</li>
+                                    </ul>
+                                    <ul>
+                                        <li><h6>Post Construction</h6></li>
+                                        <li>Construction drawings</li>
+                                        <li>Structural calculation</li>
+                                        <li>Party wall award notice</li>
+                                        <li>Environmental report Traffic & noise management report</li>
+                                        <li>Electrical certification</li>
+                                        <li>Gas safety certification</li>
+                                        <li>Fire safety certification</li>
+                                        <li>Sewer registration</li>
+                                        <li>Water efficiency calculation</li>
+                                        <li>SAP calculation & EPC Airtight testing</li>
+                                        <li>Acoustic testing</li>
+                                        <li>Insurance & warranty</li>
+                                        <li>10-year new build warranty</li>
+                                        <li>Warranty for all appliances</li>
+                                    </ul>
+                                </div>
                             </div>
                             <a href="#" className={this.state.view3 ? 'active' : ''} onClick={(e) => this.toggleView(e, 'view3')}>
                                 {this.state.view3 ? "show less" : "read more"}
