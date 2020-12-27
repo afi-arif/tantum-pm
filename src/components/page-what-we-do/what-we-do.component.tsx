@@ -54,21 +54,23 @@ export default class Whatwedo extends React.Component<InfoView> {
                                 Once this is completed, we will be able to give you a very accurate payment schedule based on schedules of work and material deliveries.
                                 </p>
                             </div>
-                            <a href="#" onClick={(e) => this.toggleView(e, 'view1')}>read more</a>
+                            <a href="#" className={this.state.view1 ? 'active' : ''} onClick={(e) => this.toggleView(e, 'view1')}>read more</a>
                         </div>
                         <div className="feature">
                             <h5>During</h5>
                             <div className={`info ${this.state.view2 ? 'active' : ''}`}>
                                 <p>While the project is underway, your project manager will give you periodic updates. This can be done remotely, or face-to-face – whichever you prefer. You’ll also be able to track the progress of your project through our online portal – meaning you can get updates wherever you are. We will guarantee that the work is going ahead as per the plans, be compliant with all local building regulations, and keep the building inspector informed of all completed stages. With us overseeing the work, and the stringent contracts that we will have in place, we will ensure the builders adhere to the budget, which means you will not have budgets spiralling out of control!</p>
                             </div>
-                            <a href="#" onClick={(e) => this.toggleView(e, 'view2')}>read more</a>
+                            <a href="#" className={this.state.view2 ? 'active' : ''} onClick={(e) => this.toggleView(e, 'view2')}>read more</a>
                         </div>
                         <div className="feature">
                             <h5>After</h5>
                             <div className={`info  ${this.state.view3 ? 'active' : ''}`}>
                                 <p>We will sign off the project, and then to keep control of the main contractors, we will allow you to withhold the final 5% payment for three months for any snagging works.You will be provided with a completion file, which will contain the following documentation where applicable:</p>
                             </div>
-                            <a href="#" onClick={(e) => this.toggleView(e, 'view3')}>read more</a>
+                            <a href="#" className={this.state.view3 ? 'active' : ''} onClick={(e) => this.toggleView(e, 'view3')}>
+                                {this.state.view3 ? "show less" : "read more"}
+                            </a>
                         </div>
                     </div>
                 </div>
