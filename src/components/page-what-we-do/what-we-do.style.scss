@@ -7,6 +7,7 @@
     }
     p{
         line-height: 1.5;
+        font-size: 1.1rem;
     }
 }
 
@@ -35,6 +36,70 @@
             background: #e8e6e6;
             padding: 2.6rem 0;
             text-align: center;
+        }
+    }
+}
+
+.tantum-block.our-purpose{
+    margin-left: 3.5rem;
+    background: url("./../../images/small/tantum-sunflower.png") right top 3.3rem no-repeat;
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    p{
+        margin-right: 35%;
+    }
+    p:first-of-type{
+        color: #000;
+        margin-bottom: 1.5rem;
+        margin-right: 45%;
+    }
+}
+
+.tantum-block.tantum-steps{
+    min-height: 50rem;
+    background-image: url("./../../images/small/tantum-house-modular-kitchen.jpg"),
+    linear-gradient(to left, #fafafa 0,  #fafafa 19rem, rgba(0,0,0,0) 0rem );
+    background-position: right 2rem, top right 3.6rem;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+
+    .features{
+        margin-right: 17rem;
+        padding-top: 2rem;
+        max-width: 35rem;
+        .feature{
+            background: #e8e6e6;
+            margin-bottom: 1rem;
+            padding: 2rem 1.5rem 1rem 3.6rem;
+
+            h5{
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .info{
+                height: 5rem;
+                margin-bottom: 1.5rem;
+                overflow-y: hidden;
+                p{
+                    color: #000;
+                    line-height: 1.2;
+                }
+            }
+            .info.active{
+                height: 100%;
+                overflow-y: visible;
+            }
+            a{
+                display: block;
+                text-align: right;
+                background: url("./../../images/see-more-btn.svg") right center / 1rem no-repeat;
+                padding-right: 1.5rem;
+            }
         }
     }
 }
@@ -83,6 +148,55 @@
                 background: #e8e6e6;
                 padding: 3.5rem 0;
                 text-align: center;
+            }
+        }
+    }
+    
+    .tantum-block.our-purpose{
+        margin-left: 6.2rem;
+        background: url("./../../images/medium/tantum-sunflower.png") right top 3.3rem no-repeat;
+
+        p{
+            max-width: 38.5rem;
+        }
+       
+    }
+
+    .tantum-block.tantum-steps{
+        min-height: 62.3rem; /*x*/
+        background-image: url("./../../images/medium/tantum-house-modular-kitchen.jpg"), /*x*/
+        linear-gradient(to left, #fafafa 0,  #fafafa 31rem, rgba(0,0,0,0) 0rem ); /*x*/
+        background-position: right 4rem, top -5rem right 3.6rem; /*x*/
+        border: 2px solid blu;
+
+    
+        .features{
+            margin-right: 30.5rem;
+            padding-top: 4rem;
+            max-width: 50rem;
+            .feature{
+                margin-bottom: 1.5rem;/*x*/
+                padding: 2.5rem 1.5rem 1rem 3rem; /*x*/
+    
+                h5{
+                    font-size: 1.6rem; /*x*/
+                    margin-bottom: 0.5rem;
+                }
+    
+                .info{
+                    height: 7rem; /*x*/
+                    margin-bottom: 1.5rem;
+                    overflow-y: hidden;
+                    p{
+                        line-height: 1.7;  /*x*/
+                        font-size: 1.4rem; /*x*/
+                    }
+                }
+                a{
+                    font-size: 1.2rem; /*x*/
+                    background: url("./../../images/see-more-btn.svg") right center / 1rem no-repeat;
+                    padding-right: 2.5rem;
+                }
             }
         }
     }
@@ -139,5 +253,50 @@
         }
     }
     
+    .tantum-block.our-purpose{
+        margin-left: 20rem;
+        background: url("./../../images/large/tantum-sunflower.png") right top 3.3rem no-repeat;
 
+        p{
+            max-width: 66rem;
+        }
+
+    }
+
+    .tantum-block.tantum-steps{
+        min-height: 86rem; /*x*/
+        background-image: url("./../../images/large/tantum-house-modular-kitchen.jpg"), /*x*/
+        linear-gradient(to left, #fafafa 0,  #fafafa 31rem, rgba(0,0,0,0) 0rem ); /*x*/
+        background-position: right 4rem, top -5rem right 3.6rem; /*x*/
+    
+        .features{
+            margin-right: 42rem;
+            padding-top: 4rem;
+            max-width: 58rem;
+            .feature{
+                margin-bottom: 3rem;/*x*/
+                padding: 5rem 2rem 3rem 4rem; /*x*/
+    
+                h5{
+                    font-size: 2rem; /*x*/
+                    margin-bottom: 0.5rem;
+                }
+    
+                .info{
+                    height: 6rem; /*x*/
+                    margin-bottom: 1.5rem;
+                    overflow-y: hidden;
+                    p{
+                        line-height: 1.7;  /*x*/
+                        font-size: 1.6rem; /*x*/
+                    }
+                }
+                a{
+                    font-size: 1.4rem; /*x*/
+                    background: url("./../../images/see-more-btn.svg") right center / 2rem no-repeat;
+                    padding-right: 3rem;
+                }
+            }
+        }
+    }
 }
