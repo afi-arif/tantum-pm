@@ -41,7 +41,7 @@ export class Header extends React.Component<React.LinkHTMLAttributes<any>, NaviS
                        <li><NavLink activeClassName="active" to="home">Home</NavLink></li>
                        <li><NavLink to="about-us">About us</NavLink></li>
                        <li><NavLink to="what-we-do">What we do</NavLink></li>
-                       <li><NavLink to="projects">Projects</NavLink></li>
+                       <li><NavLink to="/projects">Projects</NavLink></li>
                        <li><NavLink to="contacts">Contacts</NavLink></li>
                        <li><a href="#">download <span>browchure</span></a></li>
                    </ul>

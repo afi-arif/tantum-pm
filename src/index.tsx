@@ -9,6 +9,7 @@ import {Layout } from "./components/layout";
 const Home = React.lazy(() => import("./components/page-home/home.component"));
 const Aboutus = React.lazy(() => import("./components/page-about-us/about-us.component"));
 const WhatWeDo = React.lazy(() => import("./components/page-what-we-do/what-we-do.component"));
+const Projects = React.lazy((() => import("./components/page-projects/projects.component")));
 
 
 const App:FC = () => {
@@ -18,7 +19,7 @@ const App:FC = () => {
             <Layout>
             <Switch>
                 <Suspense fallback={<div>Loading...</div>}>
-                    <Redirect exact from="/" to="/what-we-do" />
+                    <Redirect exact from="/" to="/projects" />
                     <Route path="/home">
                         <Home />
                     </Route>
@@ -27,6 +28,9 @@ const App:FC = () => {
                     </Route>
                     <Route path="/what-we-do">
                         <WhatWeDo />
+                    </Route>
+                    <Route path="/projects">
+                        <Projects />
                     </Route>
                 </Suspense>
             </Switch>
