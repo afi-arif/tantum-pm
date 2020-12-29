@@ -1,0 +1,309 @@
+.country-uk{
+
+.tantum-block {
+
+    .address-project{
+        display: flex;
+        padding: 2rem 2rem 21rem 0;
+        margin-left: 1.5rem;
+        
+        & > div {
+            flex-basis: 60%;
+        }
+        & > div:first-child {
+            flex-basis: 40%;
+        }
+        div.project-title{
+            h5{
+                font-size: 1.6rem;
+                font-family: 'Playfair Display', serif;
+            }
+        }
+
+        div.project-detail{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.1rem;
+            color: #000;
+        
+            & > div {
+                display: flex;
+                flex-direction: column;
+                div{
+                    flex-basis: 70%;
+                    display: flex;
+                    padding: 0.2rem;
+                    height: auto;
+                }
+                div:first-child{
+                    flex-basis: 30%;
+                }
+            }
+        }
+    }
+
+    .project-description{
+        margin:0 4rem 0 3.5rem;
+        padding: 1.5rem;
+        background: #e8e6e6;
+
+        p:first-child{
+            padding-top: 0.5rem;
+            float: left;
+        }
+
+        p {
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            color: #000;
+            font-size: 1.1rem;
+        }
+    }
+
+    .seen-beach,
+    .seen-statium{
+        width: 15rem;
+        height: 17rem;
+        float: right;
+        background:  url("./../../../images/small/tantum-beach-UK.jpg") top  right  no-repeat;
+        margin-left: 1.5rem;
+    }
+
+    .seen-statium{
+        background:  url("./../../../images/small/tantum-stadium-UK.jpg") top 2rem right 1.5rem no-repeat;
+    }
+
+}
+
+.tantum-block.project-beach{
+    background: url("./../../../images/small/tantum-project-UK.jpg") right 4rem top 11rem no-repeat,
+    url("./../../../images/small/tantum-in-UK.jpg") center top no-repeat;
+    margin-bottom: 4rem;
+}
+.tantum-block.project-post-office{
+    background: url("./../../../images/small/tantum-mall-UK.jpg") left 3.5rem top 11.5rem no-repeat,
+    url("./../../../images/small/tantum-in-UK-II.jpg") right top  no-repeat;
+    
+}
+
+.tantum-block.more-info{
+    padding: 1rem;
+    padding-left: 3.5rem;
+
+    a{
+        color: rgb(12, 112, 125);
+        font-style: italic;
+        text-decoration: underline;
+    }
+}
+
+}
+
+@media screen and (min-width:768px) and (max-width:1023px){
+    .country-uk {
+        .tantum-block{
+
+            .address-project{
+                display: flex;
+                padding: 2rem 2rem 45rem 0;
+                margin-left: 3.5rem;
+                
+                & > div {
+                    flex-basis:50%;
+                }
+                & > div:first-child {
+                    flex-basis: 50%;
+                }
+                div.project-title{
+                    h5{
+                        font-size: 3.2rem; /*x*/
+                        font-family: 'Playfair Display', serif;
+                    }
+                }
+        
+                div.project-detail{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.4rem;
+                    color: #000;
+                    align-content: flex-start;
+                    border-left: 1px solid #b6b6b6;
+                    padding-left: 5rem;
+    
+                    & > div {
+                        display: flex;
+                        flex-direction: column;
+                        div{
+                            flex-basis: 70%;
+                            display: flex;
+                            padding: 0.2rem;
+                        }
+                        div:first-child{
+                            flex-basis: 30%;
+                        }
+                    }
+                
+                   
+                }
+            }
+            .project-description{
+                margin:0 4.5rem 0 3.5rem;
+                padding: 2.5rem;
+                background: #e8e6e6;
+        
+                p:first-child{
+                    margin-right: 0;
+                    padding-top: 0.5rem;
+                }
+    
+                p {
+                    margin-bottom: 2rem;
+                    font-size: 1.4rem;
+                }
+            }
+    
+            .seen-beach,
+            .seen-statium{
+                width: 28.2rem;
+                height: 32.1rem;
+                float: right;
+                background:  url("./../../../images/medium/tantum-beach-UK.jpg") top  right  no-repeat;
+                margin-left: 1.5rem;
+            }
+    
+            .seen-statium{
+                background:  url("./../../../images/medium/tantum-stadium-UK.jpg") top right no-repeat;
+            }
+        }
+        
+    
+        .tantum-block.project-beach{
+            background: url("./../../../images/medium/tantum-project-UK.jpg") right 4.5rem top 16.6rem no-repeat,
+            url("./../../../images/medium/tantum-in-UK.jpg") no-repeat; 
+        }
+    
+        .tantum-block.project-post-office{
+            background: url("./../../../images/medium/tantum-mall-UK.jpg") left 3.5rem top 17.5rem no-repeat,
+            url("./../../../images/medium/tantum-in-UK-II.jpg") right top  no-repeat;
+            .address-project{
+                display: flex;
+                padding: 2rem 2rem 46rem 0;
+            }
+            
+        }
+    
+        .tantum-block.more-info{
+            padding: 1.5rem;
+            padding-left: 3.5rem;
+            a{
+                font-size: 1.4em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1024px){
+    .country-uk {
+
+        .tantum-block{
+
+            .address-project{
+                display: flex;
+                padding: 5rem 2rem 57.5rem 0;
+                margin-left: 13rem;
+                
+                & > div {
+                    flex-basis:50%;
+                    margin-bottom: 5rem;
+                }
+                & > div:first-child {
+                    flex-basis: 50%;
+                }
+                div.project-title{
+                    h5{
+                        font-size: 4rem; /*x*/
+                        font-family: 'Playfair Display', serif;
+                    }
+                }
+        
+                div.project-detail{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 1.6rem;
+                    color: #000;
+                    align-content: flex-start;
+                    border-left: 1px solid #b6b6b6;
+                    padding-left: 5rem;
+    
+                    & > div {
+                        display: flex;
+                        flex-direction: column;
+                        div{
+                            flex-basis: 70%;
+                            display: flex;
+                            padding: 0.2rem;
+                        }
+                        div:first-child{
+                            flex-basis: 30%;
+                        }
+                    }
+                
+                   
+                }
+            }
+            .project-description{
+                margin:0 7rem 0 5rem;
+                padding:6rem 8.5rem 7rem 9rem;
+                background: #e8e6e6;
+        
+                p:first-child{
+                    margin-right: 0;
+                    padding-top: 0.5rem;
+                }
+    
+                p {
+                    margin-bottom: 2rem;
+                    font-size: 1.6rem;
+                }
+            }
+    
+            .seen-beach,
+            .seen-statium{
+                width: 30.77rem;
+                height: 42.7rem;
+                float: right;
+                background:  url("./../../../images/large/tantum-beach-UK.jpg") top  right  no-repeat;
+                margin-left: 10.5rem;
+            }
+    
+            .seen-statium{
+                background:  url("./../../../images/large/tantum-stadium-UK.jpg") top right no-repeat;
+            }
+        }
+        
+    
+        .tantum-block.project-beach{
+            background: url("./../../../images/large/tantum-project-UK.jpg") right 7rem top 20rem no-repeat,
+            url("./../../../images/large/tantum-in-UK.jpg") no-repeat; 
+            margin-bottom: 9rem;
+        }
+    
+        .tantum-block.project-post-office{
+            background: url("./../../../images/large/tantum-mall-UK.jpg") left 7.4rem top 17.5rem no-repeat,
+            url("./../../../images/large/tantum-in-UK-II.jpg") right top  no-repeat;
+            .address-project{
+                display: flex;
+                padding: 2rem 2rem 58rem 0;
+            }
+            
+        }
+       
+        .tantum-block.more-info{
+            padding: 3rem;
+            padding-left: 4rem;
+            a{
+                font-size: 1.4em;
+            }
+        }
+    }
+}
