@@ -51,8 +51,9 @@ a.nav-icon {
     margin-top: 3rem;
 }
 
+ 
 
-header{
+.tantum-wrapper > header{
     padding: 1.8rem 3.2rem 2rem 1.8rem;
     display: flex;
     justify-content: space-between;
@@ -171,7 +172,7 @@ footer{
     .hand-hold{
         display: none;
     }
-    header{
+    .tantum-wrapper > header{
         padding-right: 0;
         padding-left: 13rem;
         .tantum-logo{
