@@ -29,20 +29,20 @@ export class Header extends React.Component<React.LinkHTMLAttributes<any>, NaviS
                    <a className="nav-icon hidden" onClick={this.toggle} href="#">tantum-Menu</a>
                    <ul className="hand-hold">
                        <li><NavLink activeClassName="active" to="home" onClick={this.onChangeRoute}>Home</NavLink></li>
-                       <li><NavLink to="about-us" onClick={this.onChangeRoute}>About us</NavLink></li>
-                       <li><NavLink to="what-we-do" onClick={this.onChangeRoute}>What we do</NavLink></li>
-                       <li><NavLink to="projects" onClick={this.onChangeRoute}>Projects</NavLink></li>
-                       <li><NavLink to="contacts" onClick={this.onChangeRoute}>Contacts</NavLink></li>
+                       <li><NavLink to="/about-us" onClick={this.onChangeRoute}>About us</NavLink></li>
+                       <li><NavLink to="/what-we-do" onClick={this.onChangeRoute}>What we do</NavLink></li>
+                       <li><NavLink to="/projects" onClick={this.onChangeRoute}>Projects</NavLink></li>
+                       <li><NavLink to="/contact-us" onClick={this.onChangeRoute}>Contacts</NavLink></li>
                        <li><a href="#">download <span>browchure</span></a></li>
                    </ul>
                </nav>
                <nav className="no-hand-hold">
                    <ul >
                        <li><NavLink activeClassName="active" to="home">Home</NavLink></li>
-                       <li><NavLink to="about-us">About us</NavLink></li>
-                       <li><NavLink to="what-we-do">What we do</NavLink></li>
+                       <li><NavLink to="/about-us">About us</NavLink></li>
+                       <li><NavLink to="/what-we-do">What we do</NavLink></li>
                        <li><NavLink to="/projects">Projects</NavLink></li>
-                       <li><NavLink to="contacts">Contacts</NavLink></li>
+                       <li><NavLink to="/contact-us">Contacts</NavLink></li>
                        <li><a href="#">download <span>browchure</span></a></li>
                    </ul>
                </nav>

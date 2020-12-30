@@ -6,8 +6,16 @@ const FR = React.lazy(() => import("./project-france/project-france.component"))
 const LT = React.lazy(() => import("./project-lithuania/project-lithuania.component"));
 
 export default class Projects extends React.Component {
+
+    projects: boolean = false;
+
+    constructor(props:{}){
+        super(props);
+        this.projects = true;
+    }
     
     render(){
+
         return(
           <>
             <header className="page-header">

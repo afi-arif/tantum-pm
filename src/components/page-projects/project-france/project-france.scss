@@ -1,0 +1,64 @@
+.country-fr{
+    .tantum-block.project-restaurant{
+        background: url("./../../../images/small/tantum-pic-multistory.jpg") left 3.5rem top 12rem no-repeat,
+        url("./../../../images/small/tantum-in-FR.jpg") right top no-repeat;
+    
+            .address-project{
+                margin-left: 3.5rem;
+                padding-bottom: 20rem;
+            }
+            
+            .seen-restaurant{
+                background:  url("./../../../images/small/tantum-pic-restaurant.jpg") top  right  no-repeat;
+            }
+    }
+    
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px){
+    .country-fr{
+        .tantum-block.project-restaurant{
+            background: url("./../../../images/medium/tantum-pic-multistory.jpg") left 3.5rem top 17.5rem no-repeat,
+            url("./../../../images/medium/tantum-in-FR.jpg") right top no-repeat;
+
+            .address-project{
+                margin-left: 3.5rem;
+                padding-bottom: 40rem;
+
+                .project-title{
+                    h5{
+                        max-width: 36rem;
+                    }
+                }
+            }
+
+            .seen-restaurant{
+                background:  url("./../../../images/medium/tantum-pic-restaurant.jpg") top  right  no-repeat;
+            }
+
+        }
+
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    .country-fr{
+        .tantum-block.project-restaurant{
+            background: url("./../../../images/large/tantum-pic-multistory.jpg") left 3.5rem top 17.5rem no-repeat,
+            url("./../../../images/large/tantum-in-FR.jpg") right top no-repeat;
+
+            .address-project{
+                margin-left: 13rem;
+                padding-bottom: 55rem;
+            }
+
+            .seen-restaurant{
+                background:  url("./../../../images/large/tantum-pic-restaurant.jpg") top  right  no-repeat;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,67 @@
+.country-lt{
+    .tantum-block.project-restaurant{
+        background: url("./../../../images/small/tantum-pic-lake.jpg") left 3.5rem top 12rem no-repeat,
+        url("./../../../images/small/tantum-in-LT.jpg") right top no-repeat;
+    
+            .address-project{
+                margin-left: 3.5rem;
+                padding-bottom: 20rem;
+            }
+            
+            .seen-restaurant{
+                background:  url("./../../../images/small/tantum-pic-engineer.jpg") top  right  no-repeat;
+            }
+    }
+    
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px){
+    .country-lt{
+        .tantum-block.project-restaurant{
+            background: url("./../../../images/medium/tantum-pic-lake.jpg") left 3.5rem top 17.5rem no-repeat,
+            url("./../../../images/medium/tantum-in-LT.jpg") right top no-repeat;
+
+            .address-project{
+                margin-left: 3.5rem;
+                padding-bottom: 40rem;
+
+                .project-title{
+                    h5{
+                        max-width: 36rem;
+                    }
+                }
+            }
+
+            .seen-restaurant{
+                background:  url("./../../../images/medium/tantum-pic-engineer.jpg") top  right  no-repeat;
+            }
+
+        }
+
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    .country-lt{
+        .tantum-block.project-restaurant{
+            background: url("./../../../images/large/tantum-pic-lake.jpg") left 3.5rem top 25rem no-repeat,
+            url("./../../../images/large/tantum-in-LT.jpg") right top no-repeat;
+
+            .address-project{
+                margin-left: 13rem;
+                padding-bottom: 57.2rem;
+                h5{
+                    max-width: 47rem;
+                }
+            }
+
+            .seen-restaurant{
+                background:  url("./../../../images/large/tantum-pic-engineer.jpg") top  right  no-repeat;
+            }
+
+        }
+
+    }
+}
