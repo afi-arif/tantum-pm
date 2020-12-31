@@ -20,7 +20,7 @@ const App:FC = () => {
             <Layout>
             <Switch>
                 <Suspense fallback={<div>Loading...</div>}>
-                    <Redirect exact from="/" to="/contact-us" />
+                    <Redirect exact from="/" to="/home" />
                     <Route path="/home">
                         <Home />
                     </Route>

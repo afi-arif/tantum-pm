@@ -4,7 +4,7 @@ import "./home.style.scss";
 export default class Home extends React.Component {
     render() {
         return (
-            <>
+            <div className="home-page">
                <div className="tantum-block winter-house">
                    <div className="content">
                        <h2>Your End-to-end project management.</h2>
@@ -84,7 +84,7 @@ By putting your project out to tender, we’ll curate the most competitive quote
                         </div>
                    </div>
                </div>
-            </>
+            </div>
         )
     }
 }

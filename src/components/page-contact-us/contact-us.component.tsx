@@ -10,7 +10,7 @@ interface FormFields {
         message:string;
     },
     errors:{
-        [key:string] : string
+        [key:string] : boolean
     }
 }
 
@@ -30,11 +30,8 @@ export default class ContactUs extends React.Component<FormFields> {
                 message:""
             },
             errors: {
-                name:"",
-                email:"",
-                phone:"",
-                option:"",
-                message:""
+                name:false,
+                email:false,
             }
         }
     }
@@ -42,9 +39,9 @@ export default class ContactUs extends React.Component<FormFields> {
     contactSubmit(e:React.FormEvent<HTMLFormElement>):void {
         e.preventDefault();
         if(this.fieldValidation()){
-            alert("Form submitted");
+            console.log("Form submitted with" + this.state.fields);
           }else{
-            alert("Form has errors.")
+            console.log("Form can't submit with" + this.state.fields);
           }
       
         console.log("form values", this.state);
@@ -57,19 +54,19 @@ export default class ContactUs extends React.Component<FormFields> {
 
         if(!fields["name"]){
             formIsValid = false;
-            errors['name'] = "Cannot be empty";
+            errors['name'] = true;
         }
 
         if(fields["name"].trim().length){
             if(!fields["name"].match(/^[a-zA-Z]+$/)){
               formIsValid = false;
-              errors["name"] = "Only letters";
+              errors["name"] = true;
             }      	
         }
 
         if(!fields["email"]){
             formIsValid = false;
-            errors["email"] = "Cannot be empty";
+            errors["email"] = true;
           }
 
         if(typeof fields["email"] !== "undefined" && fields["email"].length){
@@ -77,7 +74,7 @@ export default class ContactUs extends React.Component<FormFields> {
             let lastDotPos = this.state.fields["email"].lastIndexOf('.');
             if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') == -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
                 formIsValid = false;
-                errors["email"] = "Email is not valid";
+                errors["email"] = true;
             }
         }
         console.log(this.state);
@@ -86,7 +83,7 @@ export default class ContactUs extends React.Component<FormFields> {
 
     }
 
-    handleChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement> | React.ChangeEvent<HTMLSelectElement>, id: string ) =>{
+    handleChange = (e:React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>, id: string ) =>{
         e.preventDefault();
         const {value} = e.target;
         this.setState(() => ({fields: {...this.state.fields, [id]:value}}));
@@ -110,20 +107,21 @@ export default class ContactUs extends React.Component<FormFields> {
                             a meeting or site visit.</p>
                             <form name="contactform" 
                             className="contactform" 
-                            onSubmit= {this.contactSubmit.bind(this)} >
-                                <label htmlFor="name">
+                            onSubmit= {this.contactSubmit.bind(this)} autoComplete="off">
+                                <label htmlFor="name" className={this.state.errors["name"] ? "error" :""}>
                                     <input id="name" name="name" 
                                     onChange={(e) => this.handleChange(e, "name")}
                                     value={this.state.fields["name"]}
                                     autoComplete="off"
                                     placeholder="Name" type="text"/>
                                 </label>
-                                <span className="error">{this.state.errors["name"]}</span>
+                                {/* <span >{this.state.errors["name"]}</span> */}
                                 <div>
                                 <label htmlFor="email">
                                     <input placeholder="Email" 
                                     onChange={(e) => this.handleChange(e, "email")}
                                     value={this.state.fields["email"]}
+                                    autoComplete="off"
                                     type="email" name="email" id="email"/>
                                 </label>
                                 <span className="error">{this.state.errors["email"]}</span>
@@ -131,6 +129,7 @@ export default class ContactUs extends React.Component<FormFields> {
                                 <input type="tel" name="phone" 
                                 onChange={(e) => this.handleChange(e, "phone")}
                                 value={this.state.fields["phone"]}
+                                autoComplete="off"
                                 placeholder="Phone" id="phone"/> </label>
                                 </div>
                                 <label htmlFor="options" className="select" >
@@ -145,6 +144,7 @@ export default class ContactUs extends React.Component<FormFields> {
                                     <textarea placeholder="Message" 
                                     value={this.state.fields["message"]}
                                     onChange={(e) => this.handleChange(e, "message")}
+                                    autoComplete="off"
                                     name="message" id="message"></textarea></label>
                                 <button type="submit">Send</button>
                             </form>

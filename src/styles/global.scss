@@ -147,7 +147,35 @@ footer{
     }
 }
 
+
+.tantum-block{
+    margin-bottom: 3rem;
+    position: relative;
+    margin-left: 1.8rem;
+    h2{
+        font-size: 1.6rem;
+        font-family: "Playfair Display", serif;
+    }
+    p{
+        line-height: 1.5;
+    }
+}
+
 @media screen and (min-width:768px){
+
+    .tantum-wrapper > header{
+        padding: 1.8rem 3.8rem 3.5rem 2.4rem;
+    }
+
+    .tantum-block{
+        h2{
+            font-size: 3.2rem;
+        }
+        p{
+            font-size: 1.6rem;
+        }
+    }
+
     footer{
         p{
             font-size: 3.2rem;
@@ -166,6 +194,17 @@ footer{
 }
 
 @media screen and (min-width:1024px){
+
+    .tantum-block{
+        h2{
+            font-size: 4.2rem;
+        }
+
+        p{
+            font-size: 1.8rem;
+        }
+    }
+
     .screen{
         display: none;
     }
