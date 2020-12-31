@@ -1,5 +1,15 @@
 .page-contact{
 
+    input, select, textarea{
+        background-color: #fff;
+        width: 100%;
+    }
+
+    input.error{
+        border: 1px solid red;
+        background: palevioletred;
+    }
+
     .tantum-block{
         h2{
             font-size: 1.6rem;
@@ -58,7 +68,6 @@
 
                         input, select, textarea{
                             max-width: 100%;
-                            width: 60%;
                             border: 0;
                             color: #9d9d9d;
                             font-size: 1.1rem;
@@ -242,12 +251,12 @@
                             display: flex;
                             justify-content: space-between;
 
-                            label{
+                            label:first-child{
                                 width: 50%;
                             }
 
-                            label:nth-child(2){
-                               margin-left: 2rem;
+                            label:last-child{
+                               margin-left: 5%;
                                width: 45%;
                             }
                         }
