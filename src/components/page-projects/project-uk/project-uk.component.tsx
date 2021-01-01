@@ -36,7 +36,7 @@ export default class ProjectsUK extends React.Component {
                     <p>When the renovation was finished, the owner decided to put the property on the market. We’re delighted to say it sold for above market value. More importantly, we restored the owner’s faith in project management teams, delivering high quality from start to finish.</p>
                 </div>
             </div>
-            <div className="tantum-block project-post-office">
+            <div className="tantum-block project-post-office" id="project2">
                 <div className="address-project">
                     <div className="project-title">
                         <h5>Extension project rescue in Deal,Kent</h5>

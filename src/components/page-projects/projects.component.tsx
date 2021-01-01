@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink, Redirect, Route, Switch } from "react-router-dom";
 import "./projects.style.scss";
-const UK = React.lazy(() => import("./project-uk/project-uk.component"));
-const FR = React.lazy(() => import("./project-france/project-france.component"));
-const LT = React.lazy(() => import("./project-lithuania/project-lithuania.component"));
+const UK = React.lazy(() => import("./project-uk/project-uk.component" /* webpackChunkName: "project-uk" */));
+const FR = React.lazy(() => import("./project-france/project-france.component" /* webpackChunkName: "project-france" */));
+const LT = React.lazy(() => import("./project-lithuania/project-lithuania.component" /* webpackChunkName: "project-lithuania" */));
 
 export default class Projects extends React.Component {
 

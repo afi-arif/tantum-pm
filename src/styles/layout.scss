@@ -8,6 +8,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -23,11 +24,4 @@ body{
     display: grid;
     min-height: 100vh;
     grid-template-rows: auto 1fr auto;
-    border: 1px solid red;
-}
-
-@media screen and (max-width:375px){
-    // html{
-    //     font-size: 50%;
-    // }
 }

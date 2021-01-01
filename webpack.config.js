@@ -4,14 +4,26 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-
 module.exports = {
-    watch: true,
     output:{
+        scriptType: 'module',
         path:path.resolve(__dirname, "build"),
-        filename:"bundle.js",
+        filename: '[name].js',
         publicPath: ''
     },
+    optimization: {
+     moduleIds: 'deterministic',
+     runtimeChunk: 'single',
+     splitChunks:{
+        cacheGroups:{
+            vendor:{
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                chunks: 'all',
+            }
+        }
+     }
+   },
     resolve:{
         extensions:[".ts",".tsx",".js",".jsx"]
     },

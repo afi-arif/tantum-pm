@@ -25,7 +25,7 @@ export class Header extends React.Component<React.LinkHTMLAttributes<any>, NaviS
             <header>
                <h1><NavLink className="hidden tantum-logo" to="home">Welocome to Tantum website</NavLink></h1>
                <div className={"screen " + (this.state.show ? "show":"")}></div>
-               <nav className={"small " + (this.state.show ? "show" : "")}>
+               <nav className={" hand-hold small " + (this.state.show ? "show" : "")}>
                    <a className="nav-icon hidden" onClick={this.toggle} href="#">tantum-Menu</a>
                    <ul className="hand-hold">
                        <li><NavLink activeClassName="active" to="home" onClick={this.onChangeRoute}>Home</NavLink></li>

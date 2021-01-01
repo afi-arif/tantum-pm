@@ -83,7 +83,9 @@ a.nav-icon {
                     padding: 1.5rem 2rem;
                 }
 
-                a:hover{
+                a:hover,
+                a.active{
+                    color: #0c707d;
                     background: #e8e8e8;
                 }
             }

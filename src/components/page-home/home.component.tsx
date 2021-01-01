@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./home.style.scss";
 
 export default class Home extends React.Component {
@@ -27,7 +28,7 @@ as the last.</p>
                            <p>Tantum provides project management services for private, individual clients. We have designed it for those who wish to carry out redevelopments on their own property, or to complete a new build from scratch.  </p>
                        </div>
                        <div>
-                           <a href="#">Conversions</a>
+                           <Link to="projects">Conversions</Link>
                            <a href="#">Extensions</a>
                            <a href="#">New builds</a>
                            <a href="#">Refurbishments</a>

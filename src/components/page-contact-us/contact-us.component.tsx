@@ -1,3 +1,4 @@
+import value from "*.jpg";
 import React from "react";
 import "./contact-us.scss";
 
@@ -17,22 +18,26 @@ interface FormFields {
 export default class ContactUs extends React.Component<FormFields> {
 
     state:FormFields;
+    initialState:FormFields = {
+        fields: {
+            name:"",
+            email:"",
+            phone:"",
+            option:"",
+            message:""
+        },
+        errors: {
+            name:false,
+            email:false,
+        }
+    }
 
     constructor(props: FormFields){
         super(props);
 
         this.state = {
-            fields: {
-                name:"",
-                email:"",
-                phone:"",
-                option:"",
-                message:""
-            },
-            errors: {
-                name:false,
-                email:false,
-            }
+            fields: {...this.initialState.fields},
+            errors: {...this.initialState.errors}
         }
     }
 
@@ -40,12 +45,11 @@ export default class ContactUs extends React.Component<FormFields> {
         e.preventDefault();
         if(this.fieldValidation()){
             console.log("Form submitted with" + this.state.fields);
+            this.setState(this.initialState);
           }else{
             console.log("Form can't submit with" + this.state.fields);
           }
-      
-        console.log("form values", this.state);
-    }
+        }
 
     fieldValidation(){
         let fields = this.state.fields;
@@ -77,8 +81,9 @@ export default class ContactUs extends React.Component<FormFields> {
                 errors["email"] = true;
             }
         }
-        console.log(this.state);
+        
         this.setState(() => ({...this.state.errors, errors:errors}));
+        console.log(this.state);
         return formIsValid;
 
     }
@@ -117,14 +122,13 @@ export default class ContactUs extends React.Component<FormFields> {
                                 </label>
                                 {/* <span >{this.state.errors["name"]}</span> */}
                                 <div>
-                                <label htmlFor="email">
+                                <label htmlFor="email" className={this.state.errors["email"] ? "error" :""}>
                                     <input placeholder="Email" 
                                     onChange={(e) => this.handleChange(e, "email")}
                                     value={this.state.fields["email"]}
                                     autoComplete="off"
                                     type="email" name="email" id="email"/>
                                 </label>
-                                <span className="error">{this.state.errors["email"]}</span>
                                 <label htmlFor="phone"> 
                                 <input type="tel" name="phone" 
                                 onChange={(e) => this.handleChange(e, "phone")}
@@ -134,7 +138,7 @@ export default class ContactUs extends React.Component<FormFields> {
                                 </div>
                                 <label htmlFor="options" className="select" >
                                     <select name="options" id="options" onChange={(e) => this.handleChange(e, "option")}>
-                                        <option value="">Choose an option</option>
+                                        <option defaultValue="">Choose an option</option>
                                         <option value="Metres">Metres</option>
                                         <option value="Feet">Feet</option>
                                         <option value="Fathoms">Fathoms</option>

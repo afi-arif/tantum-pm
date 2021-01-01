@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "cross-env webpack"
+    "build": "cross-env webpack --mode production"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
