@@ -108,49 +108,51 @@
         }
         .photo-gallery{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
             grid-row-gap: 4rem;
             padding-right: 2rem;
             justify-content: left;
+            
 
             div{
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-end;
                 text-align: left;
                 font-size: 1.1rem;
+                
 
                 .profile-info{
-                    padding-top: 14.3rem;
+                    padding-right: 3rem;
+                    vertical-align: top;
+                    padding-top: 12rem;
                 }
 
                 h5{
-                    margin-bottom: 0.5rem;
                     font-weight: bold;
                     color: #000;
                 }
             }
         
             div.tantum-md{
-                background: url("./../../images/small/tantum-managing-director.jpg") no-repeat;
+                background: url("./../../images/small/tantum-managing-director.jpg") left top / 70% no-repeat;
             }
             div.tantum-crm{
-                background: url("./../../images/small/tantum-relation-ship-manager.jpg") no-repeat;
+                background: url("./../../images/small/tantum-relation-ship-manager.jpg") left top / 70% no-repeat;
             }
             div.tantum-pm{
-                background: url("./../../images/small/tantum-project-manager.jpg") no-repeat;
+                background: url("./../../images/small/tantum-project-manager.jpg") left top / 70% no-repeat;
             }
             div.tantum-fc{
-                background: url("./../../images/small/tantum-finance-controller.jpg") no-repeat;
+                background: url("./../../images/small/tantum-finance-controller.jpg") left top / 70% no-repeat;
             }
             div.tantum-mm{
-                background: url("./../../images/small/tantum-marketing-manager.jpg") no-repeat;
+                background: url("./../../images/small/tantum-marketing-manager.jpg") left top / 70% no-repeat;
             }
             div.tantum-oa{
-                background: url("./../../images/small/tantum-office-admin.jpg") no-repeat;
+                background: url("./../../images/small/tantum-office-admin.jpg") left top / 70% no-repeat;
             }
             div.tantum-pd{
-                background: url("./../../images/small/tantum-product-dev-manager.jpg") no-repeat;
+                background: url("./../../images/small/tantum-product-dev-manager.jpg") left top / 70% no-repeat;
             }
         }
     }
@@ -251,15 +253,20 @@
                 div{
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-end;
                     text-align: left;
-                    font-size: 1.4rem;
+                    font-size: 1.3rem;
+                    
     
                     .profile-info{
-                        padding-top: 17.5rem;
+                        padding-right: 3rem;
+                        vertical-align: top;
+                        padding-top: 18rem;
                     }
     
-                   
+                    h5{
+                        font-weight: bold;
+                        color: #000;
+                    }
                 }
             
                 div.tantum-md{
@@ -386,15 +393,20 @@
                 div{
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-end;
                     text-align: left;
                     font-size: 1.4rem;
+                    
     
                     .profile-info{
-                        padding-top: 17.5rem;
+                        padding-right: 3rem;
+                        vertical-align: top;
+                        padding-top: 18rem;
                     }
     
-                   
+                    h5{
+                        font-weight: bold;
+                        color: #000;
+                    }
                 }
             
                 div.tantum-md{
