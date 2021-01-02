@@ -131,13 +131,12 @@
         .feedback{
             display: flex;
             padding: 1.5rem;
-            flex-wrap: wrap;
-            align-items: center;
-            font-size: 1.2rem;
+            align-items: flex-start;
+            font-size: 1.4rem;
             background: #fafafa;
             margin-bottom: 1rem;
             .imag-icon{
-                flex-basis: 6.5rem;
+                padding-left: 6.5rem;
                 height: 6.5rem;
                 margin-right: 2rem;
             }
@@ -161,14 +160,16 @@
                 span{
                     color:#981e1e;
                     font-family: Garamond, serif;
+                    display: block;
+                    margin-bottom: 1rem;
+                }
+
+                .comment{
+                    font-family: Garamond, serif;
                 }
             }
 
-            .comment{
-                flex-basis: 100%;
-                padding-top: 1rem;
-                font-family: Garamond, serif;
-            }
+            
         }
     }
 }
@@ -266,14 +267,11 @@
             .feedback{
                 display: flex;
                 padding: 1.5rem;
-                flex-wrap: wrap;
-                align-items: center;
                 font-size: 1.2rem;
                 background: #fafafa;
                 margin-bottom: 1rem;
                 .imag-icon{
-                    flex-basis: 10rem;
-                    height: 10rem;
+                    padding: 5rem;
                     margin-right: 2rem;
                 }
     
@@ -299,16 +297,13 @@
                         color:#981e1e;
                         font-family: Garamond, serif;
                     }
+
+                    .comment{
+                        font-size: 1.4rem;
+                    }
                 }
     
-                .comment{
-                    flex-basis: 100%;
-                    padding-top: 1rem;
-                    font-family: Garamond, serif;
-                    padding-left: 12rem;
-                    font-size: 1.4rem;
-                    top:-2rem; position: relative;
-                }
+                
             }
         }
     }
@@ -420,25 +415,25 @@
     .tantum-block.tantum-clients{
         margin:0;
         margin-right: 3rem;
-        padding-left: 4rem;
         margin-bottom: 3.5rem;
         background: url("./../../images/large/tantum-dotts-rectangle.png")  no-repeat 0.5rem 3.3rem;
+
+        & > div, h2 {
+            margin-left: 38.3rem;
+        }
+
         h2{
             margin-bottom: 1rem;
             font-style: italic;
-            padding-left:45.3rem;
         }
         .content{
-            padding-left:45.3rem;
+            padding-left: 0;
             .feedback{
-    
-                padding: 2rem;
                 font-size: 1.6rem;
                 margin-bottom: 2rem;
  
                 .imag-icon{
-                    flex-basis: 10rem;
-                    height: 10rem;
+                    padding: 5rem;
                     margin-right: 2.5rem;
                 }
     
@@ -452,11 +447,6 @@
                     background: url("./../../images/large/tantum-home-sofa.png") no-repeat;
                 }
     
-                .comment{
-                    padding-left: 12.5rem;
-                    position: relative;
-                    top:-2rem;
-                }
             }
         }
     }

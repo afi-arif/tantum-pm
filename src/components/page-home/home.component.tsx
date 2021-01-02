@@ -56,31 +56,32 @@ By putting your project out to tender, we’ll curate the most competitive quote
                         <div className="feedback">
                             <div className="imag-icon icon1"></div>
                             <div className="client-details">
-                                <h5>WILLIAM STONE,</h5>
+                                <h5>WILLIAM STONE</h5>
                                 <span>Orpington UK</span>
+                                <div className="comment">
+                            “The project manager went over and beyond to ensure the project was completed to high standards. The quality of the service and customer relationship was second to none. Thank You!"</div>
                             </div>
-                            <div className="comment">
-                            “The project manager went over and beyond to ensure the project was completed to high standards. The quality of the service and customer relationship was second to none. Thank You!" 
-                            </div>
+                            
                         </div>
                         <div className="feedback">
                             <div className="imag-icon icon2"></div>
                             <div className="client-details">
-                                <h5>WILLIAM STONE,</h5>
-                                <span>Orpington UK</span>
+                                <h5>DIMITRI OBLIKOV</h5>
+                                <span>London</span>
+                                <div className="comment">
+                            "The Tantum team managed every step which allowed me to get on with my life! Very easy, stress free process. Very friendly. Will definitely use Tantum again!"  
                             </div>
-                            <div className="comment">
-                            “The project manager went over and beyond to ensure the project was completed to high standards. The quality of the service and customer relationship was second to none. Thank You!" 
                             </div>
+                            
                         </div>
                         <div className="feedback">
                             <div className="imag-icon icon3"></div>
                             <div className="client-details">
-                                <h5>WILLIAM STONE,</h5>
-                                <span>Orpington UK</span>
-                            </div>
-                            <div className="comment">
+                                <h5>HANNAH BENTLEY</h5>
+                                <span>Weybridge</span>
+                                <div className="comment">
                             “The project manager went over and beyond to ensure the project was completed to high standards. The quality of the service and customer relationship was second to none. Thank You!" 
+                            </div>
                             </div>
                         </div>
                    </div>
