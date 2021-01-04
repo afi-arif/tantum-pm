@@ -1,11 +1,22 @@
 import React from "react";
 import "./project-france.scss";
 
-export default class ProjectsFR extends React.Component {
+interface FRProps {
+    onEnter:() => void;
+}
+
+export default class ProjectsFR extends React.Component<FRProps, {}> {
+
+    componentDidMount = () => {
+        if(this.props.onEnter){
+            this.props.onEnter();
+        }
+    }
+
     render(){
         return (
             <div className="country-fr">
-                <div className="tantum-block project-restaurant">
+                <div className="tantum-block project-restaurant" id="project1">
                     <div className="address-project">
                         <div className="project-title">
                             <h5>Modern transformation of a Paris apartment block</h5>

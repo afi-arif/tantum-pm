@@ -139,9 +139,10 @@ export default class ContactUs extends React.Component<FormFields> {
                                 <label htmlFor="options" className="select" >
                                     <select name="options" id="options" onChange={(e) => this.handleChange(e, "option")}>
                                         <option defaultValue="">Choose an option</option>
-                                        <option value="Metres">Metres</option>
-                                        <option value="Feet">Feet</option>
-                                        <option value="Fathoms">Fathoms</option>
+                                        <option value="Conversions">Conversions</option>
+                                        <option value="Extensions">Extensions</option>
+                                        <option value="New builds">Fathoms</option>
+                                        <option value="Refurbishments">Refurbishments</option>
                                     </select>
                                 </label>
                                 <label className="message" htmlFor="message">
@@ -163,7 +164,7 @@ export default class ContactUs extends React.Component<FormFields> {
                                 </address>
                                 <ul>
                                     <li className="phone"><a href="tel:+44 0203 643 6123">0203 643 6123</a></li>
-                                    <li className="email"><a href="mailto:enquires@tantumproperty.co.uk" target="_self">info@tantummanagement.co.uk</a>​</li>
+                                    <li className="email"><a href="mailto:Info@tantum-group.com" target="_self">Info@tantum-group.com</a>​</li>
                                     <li className="direction"><a href="https://www.google.co.in/maps/place/Lambeth+Walk,+Bishop's,+London+SE11+6DX,+UK/@51.4944374,-0.116456,17z/data=!3m1!4b1!4m5!3m4!1s0x487604be2c8c1625:0x7a12e784456beaa2!8m2!3d51.4943401!4d-0.1145112?hl=en" target="_blank" rel="noopener">Get directions</a></li>
                                 </ul>
                         </div>

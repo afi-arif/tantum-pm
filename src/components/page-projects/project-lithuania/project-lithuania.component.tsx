@@ -1,11 +1,22 @@
 import React from "react";
 import "./project-lithuania.scss";
 
-export default class ProjectsLT extends React.Component {
+interface LTProps {
+    onEnter:() => void;
+}
+
+export default class ProjectsLT extends React.Component<LTProps, {}> {
+
+    componentDidMount = () => {
+        if(this.props.onEnter){
+            this.props.onEnter();
+        }
+    }
+
     render(){
         return (
             <div className="country-lt">
-                <div className="tantum-block project-restaurant">
+                <div className="tantum-block project-restaurant" id="project1">
                     <div className="address-project">
                         <div className="project-title">
                             <h5>Modern transformation of a Paris apartment block</h5>

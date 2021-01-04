@@ -5,6 +5,18 @@ const UK = React.lazy(() => import("./project-uk/project-uk.component" /* webpac
 const FR = React.lazy(() => import("./project-france/project-france.component" /* webpackChunkName: "project-france" */));
 const LT = React.lazy(() => import("./project-lithuania/project-lithuania.component" /* webpackChunkName: "project-lithuania" */));
 
+function hashScroll() {
+    const { hash, origin, pathname } = window.location;
+    window.history.pushState("", "", origin + pathname);
+    if (hash !== "") {
+      setTimeout(() => {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) element.scrollIntoView();
+      }, 0);
+    }
+}
+
 export default class Projects extends React.Component {
 
     projects: boolean = false;
@@ -31,13 +43,13 @@ export default class Projects extends React.Component {
                 <Switch>
                     <Redirect exact from="/projects" to="/projects/united-kingdom" />
                     <Route path="/projects/united-kingdom">
-                        <UK />
+                        <UK onEnter={hashScroll} />
                     </Route>
                     <Route path="/projects/france">
-                        <FR />
+                        <FR onEnter={hashScroll} />
                     </Route>
                     <Route path="/projects/lithuania">
-                        <LT />
+                        <LT onEnter={hashScroll} />
                     </Route>
                 </Switch>
             </main>

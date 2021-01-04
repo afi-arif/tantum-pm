@@ -5,19 +5,30 @@
     linear-gradient(to right, #e8e6e6 0%,  #e8e6e6 17rem, rgba(0,212,255,0) 0%) left top -2rem no-repeat;
     height: 35rem;
     
+    
     .content{
         width: 16rem;
         background: #fff;
         top: 1.5rem;
         position: relative;
         padding: 2rem 1.5rem;
+        
 
         h2{
             margin-bottom: 1.5rem;
         }
         p{
-            margin-right: 20%;
+            margin-right: 15%;
         }
+    }
+
+    .tantum-winter-house{
+        display: flex;
+        margin-top: 8.7rem;
+        margin-right: 18.5rem;
+        height: 8rem;
+        justify-content: center;
+        align-items: center;        
     }
     
 }
@@ -37,6 +48,7 @@
             width: 50%;
         }
     }
+    
     .pattern{
         background: url("./../../images/small/tantum-dotts-squre.png") no-repeat right 0;
         height: 5.7rem;
@@ -89,6 +101,17 @@
         background: url("./../../images/small/tantum-moduler-kitchen.jpg") no-repeat;
     }
 
+    .content{
+        height: 21rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    .content.active{
+        height: auto;
+        overflow: visible;
+    }
+
     h2{
         margin-bottom: 1rem;
     }
@@ -96,6 +119,12 @@
     p{
         margin-right: 15%;
         margin-bottom: 1.5rem;
+
+        span{
+            display: block;
+            text-align: left;
+            font-size: 1.2em;
+        }
 
         strong{
             display: block;
@@ -196,25 +225,30 @@
                 font-size: 1.6rem;
             }
         }
+
+        .tantum-winter-house{
+            margin-top: 30rem;
+        }
         
     }
     
     .tantum-block.welcome{
         margin-bottom: 1.8rem;
         .content{
-            padding: 4rem 0 6.5em 3rem;
+            padding: 4rem 0 3em 3rem;
             background: #fafafa url("./../../images/medium/home-hall-light.png") no-repeat 90% 5.6rem;
             h2{
                 margin-bottom: 1.5rem;
             }
             p{
-                margin-bottom: 1.5rem;
+                margin-bottom: 5rem;
                 width: 50%;
             }
         }
         .pattern{
             background: url("./../../images/medium/tantum-dotts-squre.png") no-repeat right 0;
             height: 12.2rem;
+           
         }
     }
     .tantum-block.what-we-do{
@@ -233,6 +267,11 @@
             height: 28rem;
             top:3rem;
             background: url("./../../images/medium/tantum-moduler-kitchen.jpg") no-repeat;
+        }
+
+        .content{
+            height: 23rem;
+            margin-bottom: 1rem;
         }
 
         p{
@@ -314,13 +353,11 @@
     .tantum-block.winter-house{
         margin-top: 1.4rem;
         margin-bottom: 13.6rem;
-        background-image: 
-        url("./../../images/large/tantum-winter-home.jpg"),
-        url("./../../images/large/tantum-dotts-house.png"),
-        linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(9,9,121,0) 23%, rgba(250,250,250,1) 0%);
-        background-position: right 12rem, right 46% bottom, 0  0;
-        background-size: auto, auto, 47% 92%;
-        height: 80rem;
+        background: 
+        url("./../../images/large/tantum-winter-home.jpg") right top 12rem no-repeat,
+        url("./../../images/large/tantum-dotts-house.png") left 39rem bottom  no-repeat,
+        linear-gradient(to right,  rgba(40, 4, 243, 0) 13rem,#f0f0f0 13rem, #f0f0f0 59rem, rgba(243, 4, 115, 0) 0) left top -5rem no-repeat;
+        height: 85rem;
 
         h2{
             padding-top: 2.8rem;
@@ -337,18 +374,25 @@
                 font-size: 2rem;
             }
         }
+
+        .tantum-winter-house{
+            margin-top: 39rem;
+            margin-left: 13rem;
+            width: 46rem;
+            height: 15.5rem;
+        }
     }
     .tantum-block.welcome{
         margin-bottom: 4rem;
         margin-right: 13rem;
         .content{
-            padding: 4rem 0 6.5em 3rem;
+            padding: 4rem 0 3em 3rem;
             background: #fafafa url("./../../images/large/home-hall-light.png") no-repeat 90% 5.6rem;
             h2{
                 margin-bottom: 1.5rem;
             }
             p{
-                margin-bottom: 1.5rem;
+                margin-bottom: 5.5rem;
                 width: 30%;
             }
         }
@@ -386,6 +430,8 @@
         background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(9,9,121,0) 15%,rgba(250,250,250,1) 0%);
         .content{
             padding-left: 30rem;
+            height: 23rem;
+
         }
         .show-case{
             background: url("./../../images/large/tantum-moduler-kitchen.jpg") no-repeat left 0;
@@ -405,10 +451,13 @@
         }
         span{
                a{
-                font-size: 1.6rem;
-                background: url("./../../images/read-more-arrow.svg") no-repeat right center;
-                background-size: 1.2rem auto;
-            }
+                    font-size: 1.6rem;
+                    background: url("./../../images/read-more-arrow.svg")  right center / 1.2rem no-repeat;
+                }
+
+                a.active{
+                    background: url("./../../images/more-up-btn.svg")  right center / 1.2rem no-repeat;
+                }
         }
     }
 

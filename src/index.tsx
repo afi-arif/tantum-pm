@@ -1,6 +1,6 @@
 import React, { Suspense, FC} from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./styles/layout.scss";
 import "./styles/global.scss";
@@ -12,16 +12,13 @@ const WhatWeDo = React.lazy(() => import("./components/page-what-we-do/what-we-d
 const Projects = React.lazy((() => import("./components/page-projects/projects.component" /* webpackChunkName: "projects" */)));
 const ContactUs = React.lazy(() => import("./components/page-contact-us/contact-us.component" /* webpackChunkName: "contact-us" */));
 
-
 const App:FC = () => {
     return (
-    
         <Router>
             <Layout>
-            <Switch>
                 <Suspense fallback={<div>Loading...</div>}>
-                    <Redirect exact from="/" to="/about-us" />
-                    <Route path="/home">
+                <Switch>
+                    <Route exact path="/">
                         <Home />
                     </Route>
                     <Route path="/about-us">
@@ -36,8 +33,9 @@ const App:FC = () => {
                     <Route path="/contact-us">
                         <ContactUs />
                     </Route>
-                </Suspense>
-            </Switch>
+                    <Route component={Home} />
+                </Switch>
+            </Suspense>
             </Layout>
         </Router>
 

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "cross-env webpack --mode production"
+    "build": "webpack --mode production"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

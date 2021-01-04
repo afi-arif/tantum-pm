@@ -1,11 +1,22 @@
 import React from "react";
 import "./project-uk.style.scss";
 
-export default class ProjectsUK extends React.Component {
+interface UKProps {
+    onEnter:() => void;
+}
+
+export default class ProjectsUK extends React.Component<UKProps, {}> {
+
+    componentDidMount = () => {
+        if(this.props.onEnter){
+            this.props.onEnter();
+        }
+    }
+
     render(){
         return (
            <div className="country-uk">
-            <div className="tantum-block project-beach">
+            <div className="tantum-block project-beach" id="project1">
                 <div className="address-project">
                     <div className="project-title">
                         <h5>Extension project rescue in Deal,Kent</h5>
