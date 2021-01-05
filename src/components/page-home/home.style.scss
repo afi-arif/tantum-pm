@@ -1,3 +1,11 @@
+body.light-wire{
+    .tantum-wrapper{
+        background: linear-gradient(to left, #9db2b9 0%, #9db2b9 0.1rem, rgba(0,212,255,0) 0%) left -13.2rem top / auto 60rem no-repeat;
+    }
+    
+}
+
+
 .tantum-block.winter-house{
     margin-bottom: 4.4rem;
     background: url("./../../images/small/tantum-winter-home.jpg") left 6.6rem top 4rem no-repeat,
@@ -38,7 +46,8 @@
     .content{
         margin-bottom: 1.5rem;
         padding: 1rem 0 2em 2rem;
-        background: #fafafa url("./../../images/small/home-hall-light.png") no-repeat 78% 2.3rem;
+        background:  url("./../../images/small/home-hall-light.png") right 5rem top 2.4rem no-repeat,
+        linear-gradient(to left, #9db2b9 0%, #9db2b9 0.1rem, rgba(0,212,255,0) 0%) left -11.2rem top / auto 10rem no-repeat, #fafafa;
         min-height: 18rem;
         h2{
             margin-bottom: 1.5rem;
@@ -102,14 +111,16 @@
     }
 
     .content{
-        height: 21rem;
-        overflow: hidden;
-        margin-bottom: 1rem;
+        .show-all{
+            margin-bottom: 1rem;
+            display: none;
+        }
     }
 
     .content.active{
-        height: auto;
-        overflow: visible;
+        .show-all{
+            display: block;
+        }
     }
 
     h2{
@@ -130,11 +141,6 @@
             display: block;
         }
     }
-
-    p:last-of-type{
-       display: none;
-    }
-
 
     span{
         display: block;
@@ -209,6 +215,14 @@
 
 
 @media screen and (min-width:768px) and (max-width:1023px){
+
+    body.light-wire{
+        .tantum-wrapper{
+            background: linear-gradient(to left, #9db2b9 0%, #9db2b9 0.1rem, rgba(0,212,255,0) 0%) left -18.9rem top / auto 90rem no-repeat;
+        }
+        
+    }
+
     .tantum-block.winter-house{
         margin-bottom: 4.4rem;
         background-image: 
@@ -236,7 +250,8 @@
         margin-bottom: 1.8rem;
         .content{
             padding: 4rem 0 3em 3rem;
-            background: #fafafa url("./../../images/medium/home-hall-light.png") no-repeat 90% 5.6rem;
+            background:  url("./../../images/medium/home-hall-light.png")  right 7rem top 5.6rem no-repeat,
+            linear-gradient(to left, #9db2b9 0%, #9db2b9 0.1rem, rgba(0,212,255,0) 0%) left -16.9rem top / auto 10rem no-repeat, #fafafa;
             h2{
                 margin-bottom: 1.5rem;
             }
@@ -269,12 +284,7 @@
             background: url("./../../images/medium/tantum-moduler-kitchen.jpg") no-repeat;
         }
 
-        .content{
-            height: 23rem;
-            margin-bottom: 1rem;
-        }
-
-        p{
+          p{
             margin-right: 5%;
             margin-bottom: 1.5rem;
     
@@ -350,6 +360,13 @@
 }
 
 @media screen and (min-width:1024px){
+
+    body.light-wire{
+        .tantum-wrapper{
+            background: linear-gradient(to left, #9db2b9 0%, #9db2b9 0.1rem, rgba(0,212,255,0) 0%) left -36.4rem top / auto 125rem no-repeat;
+        }
+        
+    }
     .tantum-block.winter-house{
         margin-top: 1.4rem;
         margin-bottom: 13.6rem;
@@ -387,7 +404,8 @@
         margin-right: 13rem;
         .content{
             padding: 4rem 0 3em 3rem;
-            background: #fafafa url("./../../images/large/home-hall-light.png") no-repeat 90% 5.6rem;
+            background: url("./../../images/large/home-hall-light.png") right 8.5rem top 5.6rem no-repeat,
+            linear-gradient(to left, #9db2b9 0%, #9db2b9 0.1rem, rgba(0,212,255,0) 0%) left -23.4rem top / auto 10rem no-repeat, #fafafa;
             h2{
                 margin-bottom: 1.5rem;
             }
@@ -430,7 +448,6 @@
         background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(9,9,121,0) 15%,rgba(250,250,250,1) 0%);
         .content{
             padding-left: 30rem;
-            height: 23rem;
 
         }
         .show-case{

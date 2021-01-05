@@ -7,13 +7,13 @@ const LT = React.lazy(() => import("./project-lithuania/project-lithuania.compon
 
 function hashScroll() {
     const { hash, origin, pathname } = window.location;
-    window.history.pushState("", "", origin + pathname);
     if (hash !== "") {
-      setTimeout(() => {
-        const id = hash.replace("#", "");
-        const element = document.getElementById(id);
-        if (element) element.scrollIntoView();
-      }, 0);
+        window.location.replace(origin + pathname);
+        setTimeout(() => {
+            const id = hash.replace("#", "");
+            const element = document.getElementById(id);
+            if (element) element.scrollIntoView();
+        }, 0);
     }
 }
 

@@ -21,6 +21,14 @@ interface InterfaceHome {
         console.log(this.state);
     }
 
+    componentWillMount(){
+        document.body.classList.add("light-wire");
+    }
+
+    componentWillUnmount(){
+        document.body.classList.remove("light-wire");
+    }
+
     render() {
         return (
             <div className="home-page">
@@ -52,31 +60,34 @@ interface InterfaceHome {
                        <div>
                            <Link to="/projects/united-kingdom#project2">Conversions</Link>
                            <Link to="/projects/united-kingdom#project1">Extensions</Link>
-                           <Link to="/projects/france#project1">New builds</Link>
-                           <Link to="/projects/lithuania#project1">Refurbishments</Link>
+                           <Link to="/projects/lithuania#project1">New builds</Link>
+                           <Link to="/projects/france#project1">Refurbishments</Link>
                        </div>
                </div>
                <div className="tantum-block tantum-way">
                    <div className={`content + ${this.state.showMore ? 'active' : ''}`}>
                        <h2>The Tantum way</h2>
                        <div className="show-case"></div>
-                       <p><span>From planning to estimation to delivery, we do things differently. It's why our clients trust us. Every time.</span></p>
-                       <p>
+                        <p><span>From planning to estimation to delivery, we do things differently. It's why our clients trust us. Every time.</span></p>
+                        <p>
                            <strong>Dedicated project manager</strong>
-                           When you work with us, you’ll get your own dedicated project manager. As your point of contact for everything, they’ll take care of the entire process from start to finish. It’s like having your own personal assistant, quality auditor and budget controller all rolled into one. So you can rest assured that your project is in safe hands. Just how it should be.
+                           When you work with us, you’ll get your own dedicated project manager.
                         </p>
-                        <p>
-                        <strong>​Competitive tendering</strong>
-                        By putting your project out to tender, we’ll curate the most competitive quotes the market has to offer. All quotes come in a standardised format, so comparing them is a breeze. Using our expertise, we’ll narrow down the quotes based on cost, inclusivity, and accuracy. Then, we’ll present the best options to help you make the right decision. Easy. 
-                        </p>
-                        <p>
-                        <strong>Budget control</strong>
-                        We'll negotiate a schedule with contractors on your behalf, agreeing a timeline and payment plan that works for you. You'll never pay for everything upfront – only in stages as each phase of the work is completed. You also hold back 5% of the project’s entire cost to cover any snagging works. No going over budget. No unexpected surprises. 
-                        </p>
-                        <p>
-                        <strong>Peace of mind</strong>
-                        From legal paperwork to contractor liaison, our team will handle everything for you. At the end of your project, we’ll hand you a booklet that has everything you need in one place. All work is insured – and with a warranty for appliances and a ten-year guarantee on new builds, the quality speaks for itself. You’ll be glad you chose us. 
-                        </p>
+                        <div className="show-all">
+                            <p>As your point of contact for everything, they’ll take care of the entire process from start to finish. It’s like having your own personal assistant, quality auditor and budget controller all rolled into one. So you can rest assured that your project is in safe hands. Just how it should be.</p>
+                            <p>
+                            <strong>​Competitive tendering</strong>
+                            By putting your project out to tender, we’ll curate the most competitive quotes the market has to offer. All quotes come in a standardised format, so comparing them is a breeze. Using our expertise, we’ll narrow down the quotes based on cost, inclusivity, and accuracy. Then, we’ll present the best options to help you make the right decision. Easy. 
+                            </p>
+                            <p>
+                            <strong>Budget control</strong>
+                            We'll negotiate a schedule with contractors on your behalf, agreeing a timeline and payment plan that works for you. You'll never pay for everything upfront – only in stages as each phase of the work is completed. You also hold back 5% of the project’s entire cost to cover any snagging works. No going over budget. No unexpected surprises. 
+                            </p>
+                            <p>
+                            <strong>Peace of mind</strong>
+                            From legal paperwork to contractor liaison, our team will handle everything for you. At the end of your project, we’ll hand you a booklet that has everything you need in one place. All work is insured – and with a warranty for appliances and a ten-year guarantee on new builds, the quality speaks for itself. You’ll be glad you chose us. 
+                            </p>
+                        </div>
                    </div>
                    <span><a className={this.state.showMore ? 'active' : ''} onClick={this.showMore}>{this.state.showMore ? 'read less' : 'read more'}</a></span>
                </div>

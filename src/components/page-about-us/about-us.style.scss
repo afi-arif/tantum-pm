@@ -17,19 +17,20 @@
     padding-bottom: 9rem;
     
     .tantum-block.safe-hands{
-        background: url("./../../images/small/tantum-house-hall.jpg") no-repeat center top;
+        background: url("./../../images/small/tantum-house-hall.jpg")  left top no-repeat;
         min-height: 33.2rem;
         display: flex;
         justify-content: flex-end;
         flex-direction: column;
         flex-wrap: wrap;
-        margin-bottom: 1rem;
         padding-left: 3.6rem;
+        margin: 0 0 1rem 0;
         .content{
             background: #fff;
             padding: 1.5rem;
             margin-left: 9.3rem;
-            flex-basis: 100%;
+            width: 24.5rem;
+            margin-left: auto;
             p{
                 color: #000;
                 padding-top: 0.5rem;
@@ -37,17 +38,17 @@
         }
 
         .btn-block{
-            width: 100%;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
             background-image: linear-gradient(to right, rgba(0,0,0,0) 0rem , #e8e6e6 0%),
             url("./../../images/small/tantum-pattern-semi-squre.png");
             background-repeat: no-repeat, no-repeat;
             background-position: left 9.3rem bottom 2.5rem, left bottom;
-            padding-top: 3.1rem;
-            padding-left: 8.5rem;
-            height: 12rem;
+            margin-left: auto;
+            width: 33.7rem;
+            padding: 2.5em 0 5rem 9.5rem;
+            margin-bottom: 1.3rem;
         }
     }
 
