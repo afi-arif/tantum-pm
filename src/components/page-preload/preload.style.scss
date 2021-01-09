@@ -1,0 +1,14 @@
+.tantum-preload{
+    display: flex;
+    height: 100%;
+    animation: mymove 5s infinite;
+    background-image: url("./../../images/tantum-logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@keyframes mymove {
+    0%   {background-size: 0%;}
+    50% {background-size: 20%;}
+    100% {background-size: 0%;}
+  }

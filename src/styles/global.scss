@@ -300,5 +300,53 @@ footer{
            font-size: 1.4rem;
         }
     }
+
+    .pop-screen{
+        position: fixed;
+        left: 0; top: 0;
+        bottom: 0; right: 0;
+        background: rgba($color: #000000, $alpha: 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            background: green;
+            width: 25rem;
+            border: 0;
+
+            fieldset{
+                border: 0;
+                display: block;
+                flex-basis: 50%;
+                input, textarea{
+                    width: 100%;
+                }
+                
+            }
+            
+            .submit-form{
+                flex-basis: 100%;
+                text-align: right;
+            }
+
+            label{
+                display: block;
+            }
+            label.message{
+                height: 100%;
+                border: 1px solid green;
+            }
+            textarea{
+                border: 1px solid blue;
+                width: 100%;
+                height: 100%; 
+                box-sizing: border-box;
+            }
+        }
+    }
     
 }
