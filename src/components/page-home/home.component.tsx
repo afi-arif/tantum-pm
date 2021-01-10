@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticContext } from 'react-router';
 import { Link, withRouter, RouteComponentProps    } from 'react-router-dom';
 import "./home.style.scss";
 
@@ -18,10 +19,10 @@ interface InterfaceHome {
     showMore = (e:React.MouseEvent<HTMLAnchorElement, MouseEvent>):void => {
         e.preventDefault();
         this.setState(() => ({showMore: !this.state.showMore}));
-        console.log(this.state);
     }
 
-    componentWillMount(){
+    constructor(props: Readonly<RouteComponentProps<{}, StaticContext, unknown>>){
+        super(props);
         document.body.classList.add("light-wire");
     }
 
