@@ -9,7 +9,7 @@ module.exports = {
         scriptType: 'module',
         path:path.resolve(__dirname, "build"),
         filename: '[name].js',
-        publicPath: ''
+        publicPath: '/'
     },
     optimization: {
      moduleIds: 'deterministic',

@@ -1,15 +1,16 @@
-import React, { RefObject } from "react";
+import React, { ComponentProps, RefObject } from "react";
+import { Link, withRouter, RouteComponentProps    } from 'react-router-dom';
 import "./what-we-do.style.scss";
 
 interface InfoView {
     [key: string]: boolean
 }
 
-export default class Whatwedo extends React.Component<InfoView> {
+class Whatwedo extends React.Component<RouteComponentProps, InfoView> {
 
     state:InfoView;
 
-    constructor(props: InfoView ){
+    constructor(props: Readonly<RouteComponentProps<{}, InfoView, unknown>> ){
         super(props)
         this.state = {
             view1:false,
@@ -18,6 +19,11 @@ export default class Whatwedo extends React.Component<InfoView> {
             showList:false
         } 
     
+    }
+
+    goToProducts = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, path:string):void => {
+        e.preventDefault();
+        this.props.history.push(path);
     }
 
     showCheckList = (e:React.MouseEvent):void => {
@@ -40,7 +46,7 @@ export default class Whatwedo extends React.Component<InfoView> {
                             important as the last.</p>
                         </div>
                         <div className="content-btn">
-                            <button>Out Project</button>
+                            <button onClick={(e) => this.goToProducts(e, '/projects')}>Out Project</button>
                         </div>
                     </div>
                 </div>
@@ -120,3 +126,5 @@ export default class Whatwedo extends React.Component<InfoView> {
         )
     }
 }
+
+export default withRouter(Whatwedo);

@@ -120,7 +120,6 @@ export default class ContactUs extends React.Component<FormFields> {
                                     autoComplete="off"
                                     placeholder="Name" type="text"/>
                                 </label>
-                                {/* <span >{this.state.errors["name"]}</span> */}
                                 <div>
                                 <label htmlFor="email" className={this.state.errors["email"] ? "error" :""}>
                                     <input placeholder="Email" 
