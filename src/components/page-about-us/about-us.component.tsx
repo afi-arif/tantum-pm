@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 import "./about-us.style.scss";
 
 interface ShowInfo {
@@ -41,6 +42,11 @@ export default class Aboutus extends React.Component<ShowInfo> {
             </li>
         ))
         return (
+            <>
+            <Helmet>
+                <title>Your project, in safe hands.</title>
+                <meta name="description" content="Your project, in safe hands" />
+            </Helmet>
             <div className="main-aboutus">
                 <div className="tantum-block safe-hands">
                     <div className="content">
@@ -106,6 +112,7 @@ export default class Aboutus extends React.Component<ShowInfo> {
                     </div>
                 </div>
             </div>
+            </>
         )
     }
 }

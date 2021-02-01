@@ -1,5 +1,6 @@
 import React from "react";
 import "./project-lithuania.scss";
+import {Helmet} from "react-helmet";
 
 interface LTProps {
     onEnter:() => void;
@@ -15,6 +16,11 @@ export default class ProjectsLT extends React.Component<LTProps, {}> {
 
     render(){
         return (
+            <>
+            <Helmet>
+                <title>Your project, in safe hands. Modern transformation of a Paris apartment block</title>
+                <meta name="description" content="Modern transformation of a Paris apartment block" />
+            </Helmet>
             <div className="country-lt">
                 <div className="tantum-block project-restaurant" id="project1">
                     <div className="address-project">
@@ -50,6 +56,7 @@ export default class ProjectsLT extends React.Component<LTProps, {}> {
                     <a target="_blank" href="https://www.flickr.com/photos/147240716@N08/albums/with/72157679505805946">See more projects</a>
                 </div>
             </div>
+            </>
         )
     }
 }

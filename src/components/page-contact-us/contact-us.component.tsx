@@ -1,5 +1,5 @@
-import value from "*.jpg";
 import React from "react";
+import {Helmet} from "react-helmet";
 import "./contact-us.scss";
 
 interface FormFields {
@@ -97,6 +97,11 @@ export default class ContactUs extends React.Component<FormFields> {
 
     render(){
         return(
+            <>
+            <Helmet>
+                <title>Contact tantum project management</title>
+                <meta name="description" content="Contact tantum project management" />
+            </Helmet>
             <div className="page-contact">
                 <div className="tantum-block contact">
                     <div className="contact-form">
@@ -173,6 +178,7 @@ export default class ContactUs extends React.Component<FormFields> {
                     </div>
                 </div>
             </div>
+            </>
         )
     }
 }

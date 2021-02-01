@@ -1,5 +1,6 @@
 import React from "react";
 import "./project-uk.style.scss";
+import {Helmet} from "react-helmet";
 
 interface UKProps {
     onEnter:() => void;
@@ -15,6 +16,11 @@ export default class ProjectsUK extends React.Component<UKProps, {}> {
 
     render(){
         return (
+            <>
+            <Helmet>
+                <title>Your project, in safe hands. Extension project rescue in Deal,Kent</title>
+                <meta name="description" content="Extension project rescue in Deal,Kent" />
+            </Helmet>
            <div className="country-uk">
             <div className="tantum-block project-beach" id="project1">
                 <div className="address-project">
@@ -81,6 +87,7 @@ export default class ProjectsUK extends React.Component<UKProps, {}> {
                 <a target="_blank" href="https://www.flickr.com/photos/147240716@N08/albums/with/72157679505805946">See more projects</a>
             </div>
            </div>
+           </>
         )
     }
 }
