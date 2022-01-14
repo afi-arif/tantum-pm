@@ -120,11 +120,10 @@ a.nav-icon {
 }
 
 
-.tantum-logo{
-    background: url("./../images/tantum-logo.svg") no-repeat center;
-    padding: 4rem 3.5rem;
+.deane-logo{
+    background: url("./../images/deane-logo.svg") no-repeat center;
     background-size: contain;
-    margin-left: 1.8rem;
+    padding: 2rem 8rem;
 }
 
 footer{
@@ -179,7 +178,7 @@ footer{
     
 
     .pop-form{
-        background: url("./../images/tantum-logo.svg") no-repeat center top 1rem / 8rem,
+        background: url("./../images/deane-logo.svg") no-repeat center top 1rem / 8rem,
         url("./../images/popup-bg.jpg") center no-repeat;
         padding: 2rem;
         padding-top: 13rem;
@@ -286,8 +285,8 @@ footer{
            font-size: 1.4rem;
         }
     }
-    .tantum-logo{
-        padding: 5.3rem 4.6rem;
+    .deane-logo{
+        padding: 2rem 8rem;
     }
 
     .pop-screen{
@@ -319,8 +318,9 @@ footer{
     .tantum-wrapper > header{
         padding-right: 0;
         padding-left: 13rem;
-        .tantum-logo{
-            padding: 7rem 6rem;
+        .deane-logo{
+            padding: 3.5rem 12.5rem;
+            margin-left: 1.8rem;
         }
         nav.no-hand-hold {
             display: block;
