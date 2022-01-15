@@ -41,5 +41,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^5.2.0",
     "sass-loader": "^12.4.0"
+  },
+  "volta": {
+    "node": "14.18.3"
   }
 }

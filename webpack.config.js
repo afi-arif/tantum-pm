@@ -42,7 +42,7 @@ module.exports = {
                 use: [{loader: "html-loader"}]
             },
             {
-                test: /\.(png|jpe?g|gif|svg|pdf)$/i,
+                test: /\.(png|jpe?g|gif|mp4|svg|pdf)$/i,
                 use: [{
                     loader: "file-loader", options: {
                         name: '[path][name].[ext]'
@@ -64,12 +64,14 @@ module.exports = {
         }),
         new MiniCssExtractPlugin(),
         new webpack.DefinePlugin({
-            "process.env": {
-                "NODE_ENV": JSON.stringify(process.env.NODE_ENV)
-            }
+            'process.env.NODE_ENV' : JSON.stringify('production')
         }),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV' : JSON.stringify('development')
+        new webpack.LoaderOptionsPlugin({
+            options:{
+                compilerOptions:{
+                    "typeRoots": ["./src/types"]
+                }
+            }
         })
     ],
     devtool: 'inline-source-map',

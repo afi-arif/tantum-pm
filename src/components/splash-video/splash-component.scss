@@ -1,0 +1,29 @@
+body.splash-on{
+    overflow: hidden;
+}
+
+.tantum-splash-wrapper{
+   inset: 0;
+   position:fixed;
+   background: rgba($color: #000000, $alpha: 0.5);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 200;
+
+   .splash-video{
+       max-width: 100%;
+       text-align: center;
+   }
+
+   .footer {
+       text-align: center;
+       padding: 1rem 0;
+   }
+
+   .footer button {
+       border-radius: 2rem;
+       padding: 1rem 3rem;
+       font-size: 2rem;
+   }
+}
