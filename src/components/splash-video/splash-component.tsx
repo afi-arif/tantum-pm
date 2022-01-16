@@ -8,7 +8,9 @@ export const TantumSplash = () => {
     useEffect(() => {
         if(isVideo){
             document.body.classList.add('splash-on');
+            return;
         }
+        document.body.classList.remove('splash-on');
     }, [isVideo]);
 
     const skipVideo = (event:React.MouseEvent<HTMLButtonElement>):void => {
