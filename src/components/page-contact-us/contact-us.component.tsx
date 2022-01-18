@@ -62,9 +62,11 @@ const ContactUs = () =>  {
                                             value={values.email}
                                             type="email" name="email" id="email" />
                                     </label>
-                                    <label htmlFor="phone">
+                                    <label htmlFor="phone" className={errors.phone ? 'error':''}>
                                         <input type="tel" name="phone"
                                             autoComplete="off"
+                                            onChange={onChangeHandler}
+                                            value={values.phone}
                                             placeholder="Phone" id="phone" /> </label>
                                 </div>
                                 <label htmlFor="options" className="select" >

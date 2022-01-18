@@ -3,16 +3,19 @@ import React, { useEffect, useState } from "react";
 export interface FormProps {
     username:string;
     email:string;
+    phone:string;
 }
 
 export const inititalFormProps:FormProps = {
     username:"",
-    email:""
+    email:"",
+    phone:""
 }
 
 export const initialErrorsProps:FormProps = {
     username:'',
-    email:''
+    email:'',
+    phone:""
 }
 
 
