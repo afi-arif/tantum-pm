@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import FormValidator from "./../../services/formValidator";
+import ValueValidator from "../../services/valueValidator";
 import "./contact-us.scss";
 
 interface FormFields {
@@ -16,6 +18,8 @@ interface FormFields {
 }
 
 const ContactUs = () =>  {
+
+    const {onChangeHandler, onSubmitForm, errors} = FormValidator(ValueValidator);
 
     return (
         <>
@@ -38,12 +42,14 @@ const ContactUs = () =>  {
                                 a meeting or site visit.</p>
                             <form name="contactform"
                                 className="contactform"
-                                autoComplete="off">
-                                <label htmlFor="name">
-                                    <input id="name" name="name"
+                                autoComplete="off" onSubmit={onSubmitForm}>
+                                <label htmlFor="username">
+                                    <input id="username" name="username"
                                         autoComplete="off"
+                                        onChange={onChangeHandler}
                                         placeholder="Name" type="text" />
                                 </label>
+                                {errors.username && errors.username}
                                 <div>
                                     <label htmlFor="email">
                                         <input placeholder="Email"
