@@ -43,13 +43,12 @@ const ContactUs = () =>  {
                             <form name="contactform"
                                 className="contactform"
                                 autoComplete="off" onSubmit={onSubmitForm}>
-                                <label htmlFor="username">
+                                <label htmlFor="username" className={errors.username ? 'error':''}>
                                     <input id="username" name="username"
                                         autoComplete="off"
                                         onChange={onChangeHandler}
                                         placeholder="Name" type="text" />
                                 </label>
-                                {errors.username && errors.username}
                                 <div>
                                     <label htmlFor="email">
                                         <input placeholder="Email"

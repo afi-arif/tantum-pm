@@ -1,6 +1,5 @@
-import { FC } from "react";
 
-const ValueValidator = (values:{username:string}) => {
+const ValueValidator = (values:{username:string}):{username:string} => {
     const errors = {username:''};
     if(!values.username.trim()){
         errors.username = "User name required";
