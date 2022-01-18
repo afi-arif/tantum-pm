@@ -19,7 +19,9 @@ interface FormFields {
 
 const ContactUs = () =>  {
 
-    const {onChangeHandler, onSubmitForm, errors} = FormValidator(ValueValidator);
+    const {values, onChangeHandler, onSubmitForm, errors} = FormValidator(ValueValidator);
+
+    console.log('errors', errors);
 
     return (
         <>
@@ -42,17 +44,22 @@ const ContactUs = () =>  {
                                 a meeting or site visit.</p>
                             <form name="contactform"
                                 className="contactform"
+                                noValidate
                                 autoComplete="off" onSubmit={onSubmitForm}>
                                 <label htmlFor="username" className={errors.username ? 'error':''}>
                                     <input id="username" name="username"
                                         autoComplete="off"
                                         onChange={onChangeHandler}
+                                        value={values.username}
                                         placeholder="Name" type="text" />
                                 </label>
+                                <p>{errors.username && 'user name is required'}</p>
                                 <div>
-                                    <label htmlFor="email">
+                                    <label htmlFor="email" className={errors.email ? 'error':''}>
                                         <input placeholder="Email"
                                             autoComplete="off"
+                                            onChange={onChangeHandler}
+                                            value={values.email}
                                             type="email" name="email" id="email" />
                                     </label>
                                     <label htmlFor="phone">
