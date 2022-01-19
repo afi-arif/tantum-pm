@@ -24,7 +24,7 @@ const FormValidator = (ValueValidator:{(values:FormProps):FormProps}) => {
     const [values, setValues] = useState(inititalFormProps);
     const [errors, setErrors] = useState(inititalFormProps);
 
-    const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement>):void => {
+    const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>):void => {
         const {name, value} = e.target;
         setValues({...values, [name]:value});
     }
@@ -32,7 +32,6 @@ const FormValidator = (ValueValidator:{(values:FormProps):FormProps}) => {
     const onSubmitForm = (e:React.FormEvent<HTMLFormElement>):void => {
         e.preventDefault();
         setErrors(ValueValidator(values));
-        console.log(errors);
     }
 
     return {values, onChangeHandler, onSubmitForm, errors}

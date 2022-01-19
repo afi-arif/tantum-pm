@@ -21,8 +21,6 @@ const ContactUs = () =>  {
 
     const {values, onChangeHandler, onSubmitForm, errors} = FormValidator(ValueValidator);
 
-    console.log('errors', errors);
-
     return (
         <>
             <Helmet>
@@ -69,8 +67,8 @@ const ContactUs = () =>  {
                                             value={values.phone}
                                             placeholder="Phone" id="phone" /> </label>
                                 </div>
-                                <label htmlFor="options" className="select" >
-                                    <select name="options" id="options">
+                                <label htmlFor="options" className="select">
+                                    <select name="options" id="options" onChange={onChangeHandler}>
                                         <option defaultValue="">Choose an option</option>
                                         <option value="Conversions">Conversions</option>
                                         <option value="Extensions">Extensions</option>
@@ -81,6 +79,7 @@ const ContactUs = () =>  {
                                 <label className="message" htmlFor="message">
                                     <textarea placeholder="Message"
                                         autoComplete="off"
+                                        onChange={onChangeHandler}
                                         name="message" id="message"></textarea></label>
                                 <button type="submit">Send</button>
                             </form>
