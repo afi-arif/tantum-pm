@@ -3,17 +3,17 @@ import video from "./../../images/deane-property-management.mp4";
 import './splash-component.scss';
 
 export const TantumSplash = () => {
-    const [isVideo, setVideo] = useState<boolean>(true);
+    const [isVideo, setVideo] = useState<boolean>(false);
     const splashVideo = React.createRef<HTMLVideoElement>();
     useEffect(() => {
 
         const isHomepage = window.location.pathname;
-        if(isHomepage !== "/"){
+        if(isHomepage === "/"){
             document.body.classList.add('splash-on');
-            setVideo(false);
+            setVideo(true);
             return;
         }
-        
+        document.body.classList.remove('splash-on');
     }, [setVideo]);
 
     const skipVideo = (event:React.MouseEvent<HTMLButtonElement>):void => {
