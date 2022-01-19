@@ -1,14 +1,16 @@
 import {FormProps, initialErrorsProps} from "./formValidator";
 
 const ValueValidator = (values:FormProps):FormProps => {
+
     let errors = {...initialErrorsProps};
 
+    //username validation
     if(!values.username.trim()){
         errors.username = "User name required";
     }else {
         errors.username = '';
     }
-
+    //email validation
     if(!values.email.trim()){
         errors.email = "Email is required";
     }

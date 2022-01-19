@@ -1,28 +1,35 @@
 import React, { useEffect, useState } from "react";
 
-export interface FormProps {
+export interface FormProps{
     username:string;
     email:string;
     phone:string;
+    option?:string;
+    message?:string;
 }
 
 export const inititalFormProps:FormProps = {
-    username:"",
-    email:"",
-    phone:""
+    username:'',
+    email:'',
+    phone:"",
+    option:"",
+    message:""
 }
 
 export const initialErrorsProps:FormProps = {
     username:'',
     email:'',
-    phone:""
+    phone:"",
+    option:"",
+    message:""
 }
 
-
-const FormValidator = (ValueValidator:{(values:FormProps):FormProps}) => {
+const FormValidator = (callback:()=>void,ValueValidator:{(values:FormProps):FormProps}) => {
 
     const [values, setValues] = useState(inititalFormProps);
     const [errors, setErrors] = useState(inititalFormProps);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
 
     const onChangeHandler = (e:React.ChangeEvent<HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement>):void => {
         const {name, value} = e.target;
@@ -32,9 +39,17 @@ const FormValidator = (ValueValidator:{(values:FormProps):FormProps}) => {
     const onSubmitForm = (e:React.FormEvent<HTMLFormElement>):void => {
         e.preventDefault();
         setErrors(ValueValidator(values));
+        setIsSubmitting(true);
     }
 
-    return {values, onChangeHandler, onSubmitForm, errors}
+    useEffect(() => {
+        let isErrorsExist = Object.values(errors).filter(e => e!== '').length;
+        if(isErrorsExist === 0 && isSubmitting){
+            callback();
+        }
+    },[errors])
+
+    return {values, setValues, onChangeHandler, onSubmitForm, errors}
 
 }
 

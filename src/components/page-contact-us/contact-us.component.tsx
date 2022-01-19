@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import FormValidator from "./../../services/formValidator";
+import FormValidator, {inititalFormProps} from "./../../services/formValidator";
 import ValueValidator from "../../services/valueValidator";
 import "./contact-us.scss";
 
@@ -11,15 +11,18 @@ interface FormFields {
         phone: string | number;
         option: string;
         message: string;
-    },
-    errors: {
-        [key: string]: boolean
     }
 }
 
 const ContactUs = () =>  {
 
-    const {values, onChangeHandler, onSubmitForm, errors} = FormValidator(ValueValidator);
+    const {values, setValues, onChangeHandler, onSubmitForm, errors} = FormValidator(submitForm, ValueValidator);
+
+    function submitForm() {
+        console.log(values);
+        console.log('form submitted');
+        setValues(inititalFormProps);
+    }
 
     return (
         <>
@@ -67,8 +70,8 @@ const ContactUs = () =>  {
                                             value={values.phone}
                                             placeholder="Phone" id="phone" /> </label>
                                 </div>
-                                <label htmlFor="options" className="select">
-                                    <select name="options" id="options" onChange={onChangeHandler}>
+                                <label htmlFor="option" className="select">
+                                    <select name="option" id="option" value={values.option} onChange={onChangeHandler}>
                                         <option defaultValue="">Choose an option</option>
                                         <option value="Conversions">Conversions</option>
                                         <option value="Extensions">Extensions</option>
@@ -79,6 +82,7 @@ const ContactUs = () =>  {
                                 <label className="message" htmlFor="message">
                                     <textarea placeholder="Message"
                                         autoComplete="off"
+                                        value={values.message}
                                         onChange={onChangeHandler}
                                         name="message" id="message"></textarea></label>
                                 <button type="submit">Send</button>
