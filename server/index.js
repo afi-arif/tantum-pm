@@ -4,15 +4,10 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 
 const app = express();
-
+app.use(express.static(__dirname+'/public'));
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(cors());
-
-
-app.get("/api", (req, res) => {
-    res.send("welcome to local app");
-})
 
 app.post("/send_mail", cors(), async (req, res) => {
     let {text} = req.body;
@@ -27,8 +22,17 @@ app.post("/send_mail", cors(), async (req, res) => {
     let message = {
         from: "from@email.com",
         to: "3gwebtrain@gmail.com",
-        subject: "Subject",
-        html: `<h1>Hello SMTP Email ${text}</h1>`
+        subject: "Enquiry from Deane Project Management",
+        html: `
+        <hr />
+            <h1>Request for: ${text.option||"No title"}</h1>
+            <span>Name: ${text.username}</span><br/>
+            <span>Email: ${text.email}</span><br/>
+            <span>Phone: ${text.phone||"No phone"}</span><br/>
+            <span>Message:</span><br/>
+            <p>${text.message||"No message"}</p>
+        <hr />
+        `
     }
 
     transporter.sendMail(message, function(err, info) {
@@ -39,7 +43,7 @@ app.post("/send_mail", cors(), async (req, res) => {
         }
       });
 
-    res.send('success!');
+    res.send(200);
 });
 
 app.listen(process.env.PORT || 4000, () => {

@@ -1,7 +1,6 @@
 const prod = {
     url: {
-     API_URL: 'https://myapp.herokuapp.com',
-     API_URL_USERS: 'https://myapp.herokuapp.com/users'
+     API_URL: 'https://deanemanagement.com/',
     }
 };
 const dev = {
@@ -10,4 +9,10 @@ const dev = {
     }
 };
 
-export const config = process.env.NODE_ENV === 'development' ? dev : prod;
+const uat = {
+    url: {
+        API_URL: 'http://localhost:4000'
+    }
+};
+
+export const config = process.env.NODE_ENV === 'development' ? dev : 'uat' ? uat : prod;

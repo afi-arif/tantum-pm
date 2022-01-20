@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Helmet } from "react-helmet";
 import {config} from './../../../constants';
-import FormValidator, {inititalFormProps} from "./../../services/formValidator";
+import FormValidator, {FormProps, inititalFormProps} from "./../../services/formValidator";
 import ValueValidator from "../../services/valueValidator";
+import FormStatus from "./../form-status/form-status";
 import "./contact-us.scss";
 
 interface FormFields {
@@ -19,19 +20,30 @@ interface FormFields {
 const ContactUs = () =>  {
 
     const {values, setValues, onChangeHandler, onSubmitForm, errors} = FormValidator(submitForm, ValueValidator);
-
-    const handleSend = async(data:string) => {
+    const [isShowConfirm, setShowConfirm] = useState(true)
+    const handleSend = async(formData:FormProps) => {
         try{
-            await axios.post(config.url.API_URL+'/send_mail', {text:data});
-        } catch(error){
-            console.log('Errors', error);
+            await axios.post(config.url.API_URL+'/send_mail', {text:formData}).then(data => {
+                setValues(inititalFormProps);
+                if(data.statusText==="OK"){
+                    console.log('form submited successfuly');
+                }
+            });
+        } catch(error:any){
+            if(error){
+                console.log(error);
+            }
         }
+    }
+
+    const confirmPopHandler = () => {
+        setShowConfirm(b => !b);
     }
     
     function submitForm() {
-        console.log(values);
-        const feed = handleSend('form submitted');
-        setValues(inititalFormProps);
+        //handleSend(values);
+        confirmPopHandler();
+        console.log('done')
     }
 
     return (
@@ -118,6 +130,7 @@ const ContactUs = () =>  {
                     </div>
                 </div>
             </div>
+            <FormStatus propIsShowConfirm={isShowConfirm} confirmPopHandler={confirmPopHandler} />
         </>
     )
     
