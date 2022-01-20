@@ -1,4 +1,6 @@
 /build
+/public
+/server/node_modules
 /tmp
 /PSD
 /out-tsc
