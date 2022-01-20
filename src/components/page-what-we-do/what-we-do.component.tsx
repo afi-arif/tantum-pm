@@ -46,7 +46,7 @@ class Whatwedo extends React.Component<RouteComponentProps, InfoView> {
                             <p>Where the first stage is just as
                                 important as the last.</p>
                             <div>
-                                <video muted  autoPlay={true} preload="auto" controls width={'95%'}>
+                                <video muted preload="auto" controls width={'95%'}>
                                     <source  src={video} type="video/mp4" />
                                 </video>
                             </div>

@@ -1,5 +1,7 @@
 import React from "react";
+import axios from "axios";
 import { Helmet } from "react-helmet";
+import {config} from './../../../constants';
 import FormValidator, {inititalFormProps} from "./../../services/formValidator";
 import ValueValidator from "../../services/valueValidator";
 import "./contact-us.scss";
@@ -18,9 +20,17 @@ const ContactUs = () =>  {
 
     const {values, setValues, onChangeHandler, onSubmitForm, errors} = FormValidator(submitForm, ValueValidator);
 
+    const handleSend = async(data:string) => {
+        try{
+            await axios.post(config.url.API_URL+'/send_mail', {text:data});
+        } catch(error){
+            console.log('Errors', error);
+        }
+    }
+    
     function submitForm() {
         console.log(values);
-        console.log('form submitted');
+        const feed = handleSend('form submitted');
         setValues(inititalFormProps);
     }
 

@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
-module.exports = {
+module.exports =  {
     output: {
         scriptType: 'module',
         path: path.resolve(__dirname, "public"),
@@ -63,9 +63,6 @@ module.exports = {
             template: "./src/index.html",
         }),
         new MiniCssExtractPlugin(),
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV' : JSON.stringify('production')
-        }),
         new webpack.LoaderOptionsPlugin({
             options:{
                 compilerOptions:{

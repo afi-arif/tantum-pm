@@ -4,6 +4,7 @@ import { StaticContext } from 'react-router';
 import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import "./home.style.scss";
 
+
 interface InterfaceHome {
     showMore: boolean;
 }
