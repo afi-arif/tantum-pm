@@ -5,6 +5,7 @@ import { TantumSplash } from "./splash-video/splash-component";
 
 
 export class Layout extends React.Component {
+    isHomepage = window.location.pathname;
     render(){
         return(
             <div className="tantum-wrapper">
@@ -13,7 +14,7 @@ export class Layout extends React.Component {
                     {this.props.children}
                 </main>
                 <Footer />
-                <TantumSplash />
+                <TantumSplash isHome={this.isHomepage} />
             </div>
         )
     }

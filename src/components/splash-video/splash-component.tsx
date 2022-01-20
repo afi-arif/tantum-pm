@@ -1,20 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import video from "./../../images/deane-property-management.mp4";
 import './splash-component.scss';
 
-export const TantumSplash = () => {
-    const [isVideo, setVideo] = useState<boolean>(false);
-    const splashVideo = React.createRef<HTMLVideoElement>();
+export const TantumSplash = ({isHome}:any) => {
+    const [isVideo, setVideo] = useState<boolean>(true);
     useEffect(() => {
-
-        const isHomepage = window.location.pathname;
-        if(isHomepage === "/"){
+        if(isHome === "/" && isVideo){
             document.body.classList.add('splash-on');
-            setVideo(true);
+            setVideo(true)
             return;
         }
         document.body.classList.remove('splash-on');
-    }, [setVideo]);
+        setVideo(false);
+    }, [isVideo]);
 
     const skipVideo = (event:React.MouseEvent<HTMLButtonElement>):void => {
         event.preventDefault();
@@ -25,14 +23,12 @@ export const TantumSplash = () => {
         return null;
     }
 
-
-
     return(
         <div className="tantum-splash-wrapper">
             <div className="splash-video">
                 <div className="header">close</div>
                 <div className="body">
-                    <video ref={splashVideo} muted  autoPlay={true} preload="auto" controls width={'95%'}>
+                    <video muted  autoPlay={true} preload="auto" controls width={'95%'}>
                         <source  src={video} type="video/mp4" />
                     </video>
                 </div>
@@ -42,4 +38,8 @@ export const TantumSplash = () => {
             </div>
         </div>
     )
+}
+
+function splashContext(splashContext: any) {
+    throw new Error("Function not implemented.");
 }

@@ -1,7 +1,7 @@
 import React from 'react';
-import { StaticContext } from 'react-router';
 import { Helmet } from "react-helmet";
-import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
+import { StaticContext } from 'react-router';
+import { Link, RouteComponentProps, withRouter } from 'react-router-dom';
 import "./home.style.scss";
 
 interface InterfaceHome {

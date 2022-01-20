@@ -1,6 +1,7 @@
-import React, { ComponentProps, RefObject } from "react";
-import { Link, withRouter, RouteComponentProps } from 'react-router-dom';
+import React from "react";
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import "./what-we-do.style.scss";
+import video from "./../../images/deane-property-management.mp4";
 
 interface InfoView {
     [key: string]: boolean
@@ -44,6 +45,11 @@ class Whatwedo extends React.Component<RouteComponentProps, InfoView> {
                             <h2>Your End-to-end project management.</h2>
                             <p>Where the first stage is just as
                                 important as the last.</p>
+                            <div>
+                                <video muted  autoPlay={true} preload="auto" controls width={'95%'}>
+                                    <source  src={video} type="video/mp4" />
+                                </video>
+                            </div>
                         </div>
                         <div className="content-btn">
                             <button onClick={(e) => this.goToProducts(e, '/projects')}>Out Project</button>
