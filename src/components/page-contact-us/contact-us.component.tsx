@@ -17,36 +17,36 @@ interface FormFields {
     }
 }
 
+interface PropFormFeedback {
+    status:string|null
+}
 
 const ContactUs = () =>  {
 
     const {values, setValues, onChangeHandler, onSubmitForm, errors} = FormValidator(submitForm, ValueValidator);
-    const [isShowConfirm, setShowConfirm] = useState<boolean|null>(null)
+    const [isShowConfirm, setShowConfirm] = useState<PropFormFeedback>({status:null})
     const handleSend = async(formData:FormProps) => {
         try{
             await axios.post(config.url.API_URL+'/send_mail', {text:formData}).then(data => {
                 if(data.statusText==="OK"){
-                    console.log('form submited successfuly', data);
                     setValues(inititalFormProps);
-                    setShowConfirm(true);
+                    setShowConfirm({status:'success'});
                 }
             });
         } catch(error:any){
             if(error){
                 console.log(error);
-                setShowConfirm(true);
+                setShowConfirm({status:'error'});
             }
         }
     }
 
-    const confirmPopHandler = () => {
-        setShowConfirm(false);
+    const CancelconfirmPop = ():void => {
+        setShowConfirm({status:null});
     }
     
     function submitForm() {
         handleSend(values);
-        confirmPopHandler();
-        setShowConfirm(true);
     }
 
     return (
@@ -133,7 +133,7 @@ const ContactUs = () =>  {
                     </div>
                 </div>
             </div>
-            <FormStatus propIsShowConfirm={isShowConfirm} confirmPopHandler={confirmPopHandler} />
+            <FormStatus isShowConfirm={isShowConfirm} CancelconfirmPop={CancelconfirmPop} />
         </>
     )
     

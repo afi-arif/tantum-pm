@@ -3,22 +3,22 @@ import "./form-status.scss";
 import successImage from "../../images/success.jpg";
 import errorImage from "../../images/ErrorMessage.jpg";
 
-interface PropsConfirmPop{
-    propIsShowConfirm:boolean|null;
-    confirmPopHandler:() => void
+interface PropQuery {
+    isShowConfirm:{status:string|null};
+    CancelconfirmPop:() => void;
 }
 
-const FormStatus = ({propIsShowConfirm,confirmPopHandler}:PropsConfirmPop) => {
+const FormStatus = ({isShowConfirm,CancelconfirmPop}:PropQuery) => {
 
     useEffect(() => {
-        if(propIsShowConfirm){
+        if(isShowConfirm.status !== null){
             document.body.classList.add('pop-on');
             return;
         }
         document.body.classList.remove('pop-on');
-    }, [propIsShowConfirm])
+    }, [isShowConfirm.status]);
 
-    if(!propIsShowConfirm){
+    if(!isShowConfirm.status){
         return null;
     }
 
@@ -26,20 +26,20 @@ const FormStatus = ({propIsShowConfirm,confirmPopHandler}:PropsConfirmPop) => {
         <>
             <div className="form-status">
                 {
-                    propIsShowConfirm && 
+                    isShowConfirm.status === "success" && 
                     <div className="success-info sucess">
                         <img src={successImage} />
                         <p>Thanks You!! <small>Your submission has been sent.</small></p>
-                        <button onClick={confirmPopHandler}>OK</button>
+                        <button onClick={CancelconfirmPop}>OK</button>
                     </div>
                 }
                 {
-                    !propIsShowConfirm &&
+                    isShowConfirm.status === "error" &&
                     <div className="form-status">
                     <div className="success-info failure">
                         <img src={errorImage} />
                         <p>Thanks You!! <small>We are finding network error, please try after some time.</small></p>
-                        <button onClick={confirmPopHandler}>OK</button>
+                        <button onClick={CancelconfirmPop}>OK</button>
                     </div>
                     </div>
                 }

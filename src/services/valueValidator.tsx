@@ -14,7 +14,7 @@ const ValueValidator = (values:FormProps):FormProps => {
     if(!values.email.trim()){
         errors.email = "Email is required";
     }
-    else if(!/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/i.test(values.email)){
+    else if(!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(values.email)){
         errors.email = "Email address Invalid";
     } else {
         errors.email = ""
