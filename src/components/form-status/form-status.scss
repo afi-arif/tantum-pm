@@ -6,4 +6,53 @@ body.pop-on{
     inset: 0;
     border: 1px solid red;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.success-info{
+    background-color: #fff;
+    padding: 2rem;
+    width: 70%;
+    max-width: 60rem;
+    border-radius: 2rem;
+    border:0.2rem solid greenyellow;
+    text-align: center;
+
+    img{
+        max-width: 100%;
+        width: 25rem;
+    }
+
+    p {
+        padding: 2rem;
+        font-size: 1.5rem;
+
+        small{
+            display: block;
+            color: green;
+            font-size: 0.8em;
+        }
+    }
+}
+
+
+.success-info.success{
+    border:0.2rem solid greenyellow;
+     p {
+        small{
+            color: green;
+        }
+    }
+}
+
+.success-info.failure{
+    border:0.2rem solid red;
+     p {
+        small{
+            color: red;
+        }
+    }
 }

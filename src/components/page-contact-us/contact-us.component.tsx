@@ -20,18 +20,20 @@ interface FormFields {
 const ContactUs = () =>  {
 
     const {values, setValues, onChangeHandler, onSubmitForm, errors} = FormValidator(submitForm, ValueValidator);
-    const [isShowConfirm, setShowConfirm] = useState(true)
+    const [isShowConfirm, setShowConfirm] = useState(false)
     const handleSend = async(formData:FormProps) => {
         try{
             await axios.post(config.url.API_URL+'/send_mail', {text:formData}).then(data => {
                 setValues(inititalFormProps);
                 if(data.statusText==="OK"){
                     console.log('form submited successfuly');
+                    setShowConfirm(true);
                 }
             });
         } catch(error:any){
             if(error){
                 console.log(error);
+                setShowConfirm(false);
             }
         }
     }
